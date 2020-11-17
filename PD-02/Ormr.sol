@@ -30,7 +30,6 @@ contract Ormr {
     }
     
     // Variables here.
-    string victor;
     Hero hero;
     Dragon dragon;
     Hero[] heroes;
