@@ -3,7 +3,7 @@ pragma solidity ^0.7.0;
 pragma experimental ABIEncoderV2; // To fix a type-error we need to enable this.
 
 // This Contract is supposed to become a game where our hero is fighting dragons.
-contract Ormr{
+contract Ormr {
     
     //Events
     event encounterResult(string victor); // Emit the result of a battle.
