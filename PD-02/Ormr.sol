@@ -6,7 +6,7 @@ pragma experimental ABIEncoderV2; // To fix a type-error we need to enable this.
 contract Ormr {
     
     //Events
-    event encounterResult(string victor); // Emit the result of a battle.
+    event encounterResult(string); // Emit the result of a battle.
     
     // Mappings
     mapping (address => uint) ownerToHeroId;
@@ -31,41 +31,61 @@ contract Ormr {
     
     // Variables here.
     string victor;
+    Hero hero;
+    Dragon dragon;
+    Hero[] heroes;
+    Dragon[] dragons;
     
     constructor() public {
-        Hero memory hero = Hero(
+        Hero memory _hero = Hero(
             {
-            id : ownerToHeroId[msg.sender],
+            id : 1,
             name : "default",
             power : 50,
             health : 100,
             bank : 0
         });
         
-        Dragon memory firstDragon = Dragon(
+        _hero.id = ownerToHeroId[msg.sender];
+        
+        Dragon memory _dragon = Dragon(
             {
             id : (uint(address(this))),
             name : "defaultOrmr",
-            power : 60,
+            power : 50,
             health : 100,
             goldReward : 10
         });
         
+        hero = _hero;
+        dragon = _dragon;
+        
+        // Add the hero and dragon to arrays.
+        heroes.push(_hero);
+        dragons.push(_dragon);
+        
         // Start the game!
-        Encounter(hero, firstDragon);
+        Encounter(hero, _dragon);
         
     }
     
+    //Getters and Setters
+    function getHero() public view returns (uint) {
+        return hero.id;
+    }
+    
+    function getDragon() public view returns (uint){
+        return dragon.id;
+    }
+    
     // Lock in our Hero and the Dragon. Returns the name of the victor of the encounter.
-    function Encounter(Hero memory _hero, Dragon memory _dragon) private returns (string memory){
+    function Encounter(Hero memory _hero, Dragon memory _dragon) public {
         // Check if there are both a hero and a dragon. Require keyword and ternary operator.
         require(keccak256(abi.encodePacked(_hero.name)) != '', "Hero not found");
         require(keccak256(abi.encodePacked(_dragon.name))!= '', "Dragon not found");
         
         // Fight!
-        victor = Battle(_hero.power, _dragon.power);
-        emit encounterResult(victor); // Emit our event.
-        return victor;
+        emit encounterResult(Battle(_hero.power, _dragon.power)); // Emit our event containing result of battle..
     }
     
     // Determine who wins the fight.
@@ -82,5 +102,4 @@ contract Ormr {
     }
     
 }
-
 
