@@ -5,10 +5,10 @@ pragma experimental ABIEncoderV2; // To fix a type-error we need to enable this.
 // This Contract is supposed to become a game where our hero is fighting dragons.
 contract Ormr {
     
-    //Events
+    //Events. PD-3 Events.
     event encounterResult(string); // Emit the result of a battle.
     
-    // Mappings
+    // Mappings. PD-3 Mappings
     mapping (address => uint) ownerToHeroId;
     mapping (uint => Dragon) idToDragon;
     
@@ -23,7 +23,7 @@ contract Ormr {
     
     struct Dragon {
         string name;
-        uint id;
+        address id;
         uint power;
         uint health;
         uint goldReward;
@@ -34,7 +34,10 @@ contract Ormr {
     Dragon dragon;
     Hero[] heroes;
     Dragon[] dragons;
+    uint maxPowerDigits = 16;
+    uint maxPowerModulus = 10 ** 16;
     
+    // Called once at deployment of the contract.
     constructor() public {
         Hero memory _hero = Hero(
             {
@@ -49,7 +52,7 @@ contract Ormr {
         
         Dragon memory _dragon = Dragon(
             {
-            id : (uint(address(this))),
+            id : (address(this)),
             name : "defaultOrmr",
             power : 50,
             health : 100,
@@ -70,16 +73,27 @@ contract Ormr {
     
     //Getters and Setters
     function getHero() public view returns (uint) {
-        return hero.id;
+        return ownerToHeroId[msg.sender];
     }
     
-    function getDragon() public view returns (uint){
+    function getDragon() public view returns (address){
         return dragon.id;
     }
     
-    // Lock in our Hero and the Dragon. Returns the name of the victor of the encounter.
+    // Create hero and dragon. Refactor to factory later.
+    function createHero() internal { }
+    
+    function createDragon() internal { }
+    
+    // Semi-Random number generator. W.I.P
+    // I want to use this to determine whether the hero or dragon is stronger.
+    function random() public view returns (uint) {
+        return uint(keccak256(abi.encodePacked(block.timestamp, block.difficulty)))%maxPowerModulus;
+    }
+    
+    // Lock in our Hero and the Dragon. Emits the result of the encounter.
     function Encounter(Hero memory _hero, Dragon memory _dragon) public {
-        // Check if there are both a hero and a dragon. Require keyword and ternary operator.
+        // Check if there are both a hero and a dragon. Require keyword and ternary operator. PD-3 Error Handling.
         require(keccak256(abi.encodePacked(_hero.name)) != '', "Hero not found");
         require(keccak256(abi.encodePacked(_dragon.name))!= '', "Dragon not found");
         
