@@ -29,8 +29,7 @@ contract Ormr {
     }
     
     function getHero() public view returns (Hero memory) {
-        Hero memory myHero = HF.getHero();
-        return myHero;
+        return HF.getHero();
     }
     
     //Dragon logic
@@ -39,8 +38,7 @@ contract Ormr {
     }
     
     function getDragon () public view returns (Dragon memory) {
-        Dragon memory myDragon = DF.getDragon();
-        return myDragon;
+        return DF.getDragon();
     }
     
     // This is the function our user sees when starting a battle.
@@ -74,5 +72,3 @@ contract Ormr {
     }
     
 }
-
-
