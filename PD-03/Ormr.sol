@@ -44,8 +44,7 @@ contract Ormr {
     // This is the function our user sees when starting a battle.
     function startEncounter() public {
         // Create checks to check whether a hero and dragon are available.
-        // After finding the hero and dragon, start battle!
-        //_encounter(_hero, _dragon);
+        _encounter(HF.getHero(), DF.getDragon()); // Increase gas limit in remix.
     }
     
     // Lock in our Hero and the Dragon. Emits the result of the encounter.
@@ -59,11 +58,11 @@ contract Ormr {
     }
     
     // Determine who wins the fight.
-    function _battle(uint heroPower, uint dragonPower) private pure returns (string memory){
-        if (heroPower > dragonPower){
+    function _battle(uint heroPower, uint dragonPower) private pure returns (string memory) {
+        if (heroPower > dragonPower) {
             return "The dragon has been slain!";
         }
-        else if (heroPower < dragonPower){
+        else if (heroPower < dragonPower) {
             return "The hero has been defeated! The dragon was too strong!";
         }
         else {
