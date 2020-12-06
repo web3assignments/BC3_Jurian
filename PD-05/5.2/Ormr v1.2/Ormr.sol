@@ -25,11 +25,15 @@ contract Ormr {
     
     // Hero logic
     function createHero (string memory _name) public {
-        HF.createHero(_name);
+        HF.createHero(_name, msg.sender);
     }
     
     function getHero() public view returns (Hero memory) {
-        return HF.getHero();
+        return HF.getHero(msg.sender);
+    }
+    
+    function getHeroes() public view returns (Hero[] memory){
+        return HF.getHeroes();
     }
     
     //Dragon logic
@@ -44,7 +48,7 @@ contract Ormr {
     // This is the function our user sees when starting a battle.
     function startEncounter() public {
         // Create checks to check whether a hero and dragon are available.
-        _encounter(HF.getHero(), DF.getDragon()); // Increase gas limit in remix.
+        _encounter(HF.getHero(msg.sender), DF.getDragon()); // Increase gas limit in remix.
     }
     
     // Lock in our Hero and the Dragon. Emits the result of the encounter.
