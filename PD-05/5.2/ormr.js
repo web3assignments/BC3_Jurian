@@ -1,10 +1,6 @@
 // Let's use the contract we deployed on the Rinkeby test network!
 // Contract Address: https://rinkeby.etherscan.io/address/0x648a8087721bb3f68d2e9217a55850bfacece905
 
-// Rinkeby / infura provider.
-// const provider = 'https://rinkeby.infura.io/v3/2697eef68b384e938ab43a5499f158ea';
-// const web3 = new Web3(provider);
-
 const contract_address = '0x648a8087721bb3f68d2e9217a55850bfacece905';
 
 // Compile your contract in remix, then go to the .JSON artifact and ABI will be there.
