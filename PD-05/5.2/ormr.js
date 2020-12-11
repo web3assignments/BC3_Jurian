@@ -191,13 +191,17 @@ function createHero() {
 }
 
 // Get our hero.
-function getHero() {
-    contract.methods.getHero().call({from: accounts[0]}).then(x => console.log(x));
+async function getHero() {
+	var result = await contract.methods.getHero().call({from: accounts[0]}).then(x => {console.log(x); return x});
+	document.getElementById('getHeroName').innerText = result["name"];
+	document.getElementById('getHeroPower').innerText = result.power;
+	document.getElementById('getHeroHealth').innerText = result.health;
+
 }
 
 // Get all heroes in the contract!
-function getHeroes() {
-    contract.methods.getHeroes().call().then(x => console.log(x));
+async function getHeroes() {
+    var result = contract.methods.getHeroes().call().then(x => console.log(x));
 }
 
 // Create dragon to interact with.
@@ -206,13 +210,17 @@ function createDragon() {
 }
 
 // Get our dragon!
-function getDragon() {
-    contract.methods.getDragon().call().then(x => console.log(x));
+async function getDragon() {
+	var result = await contract.methods.getDragon().call().then(x => {console.log(x); return x});
+	document.getElementById('getDragonName').innerText = result.name;
 }
 
 // Fight! Has to be async because we have to wait for the contract/blockchain to return something
 async function startEncounter() {
-    console.log('initiating dragon eradication procedure!');
-    var result = await contract.methods.startEncounter().send({from: accounts[0]});
-    console.log(result);
+	document.getElementById('encounterResult').innerText = 'Stand by while your hero is fighting a dragon⚔️🐉';
+    var result = await contract.methods.startEncounter().send({from: accounts[0]}).then(x => {console.log(x); return x});
+	console.log(result);
+	document.getElementById('encounterResult').innerText = result.events.encounterResult.returnValues[0];
+	alert('Outcome: ' + result.events.encounterResult.returnValues[0]);
 }
+
