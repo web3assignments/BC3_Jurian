@@ -192,12 +192,23 @@ async function getHero() {
 	document.getElementById('getHeroName').innerText = result["name"];
 	document.getElementById('getHeroPower').innerText = result.power;
 	document.getElementById('getHeroHealth').innerText = result.health;
-
 }
 
 // Get all heroes in the contract!
 async function getHeroes() {
-    var result = contract.methods.getHeroes().call().then(x => console.log(x));
+	var result = await contract.methods.getHeroes().call().then(x => { console.log(x); return x});
+	// document.getElementById('allHeroes').innerText = result;
+
+	// Stackoverflow solution for creating a list. https://stackoverflow.com/a/34287777
+	var div = document.getElementById("allHeroes");
+	var ol = document.createElement("ol");
+	for(var i = 0; i < result.length; i++){
+		var li = document.createElement("li");
+		//document.getElementById('allHeroes').innerHTML += result[i].name;
+		li.innerHTML = result[i].name;
+		ol.appendChild(li);
+	}
+	div.appendChild(ol);
 }
 
 // Create dragon to interact with.
