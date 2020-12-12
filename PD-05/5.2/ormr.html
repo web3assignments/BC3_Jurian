@@ -21,15 +21,15 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <h3>Create your hero!</h3>
                 <label for="heroName">Name:</label>
                 <input type="text" id="heroName" name="heroName"><br><br>
                 <button value="heroName" type="button" onClick='createHero()'>Create Hero</button> 
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <h3>Get your hero!</h3>
-                <br><br>
+              </br>
                 <button id="getHero" type="button" onClick='getHero()'>Get Hero</button> 
               </br>
                 <label>Hero Name:</label>
@@ -41,6 +41,15 @@
                 <label>Hero Health:</label>
                 <p id="getHeroHealth"></p>
               </br>
+              </div>
+              <div class="col-sm-4">
+                <h3>Load all heroes</h3>
+                <label>Load all known heroes in the contract</label>
+                <br><br>
+                <button id="getHero" type="button" onClick='getHeroes()'>Get Heroes</button> 
+              </br>
+              <div class="col-sm-4" id="allHeroes">
+              </div>
               </div>
             </div>
           </div>
