@@ -414,7 +414,8 @@ async function getHeroes() {
 	// document.getElementById('allHeroes').innerText = result;
 
 	// Stackoverflow solution for creating a list. https://stackoverflow.com/a/34287777
-	var div = document.getElementById("allHeroes");
+  var div = document.getElementById("allHeroes");
+  document.getElementById("allHeroes").innerHTML = "";  // clear contents before filling the div.
 	var ol = document.createElement("ol");
 	for(var i = 0; i < result.length; i++){
 		var li = document.createElement("li");
