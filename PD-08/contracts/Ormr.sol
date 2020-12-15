@@ -89,15 +89,17 @@ contract Ormr {
     }
 
     // Check oracle output
-    function callOracleRandom() public returns (bytes memory) {
-        OO.GetRandom(5); // call oracle 
-        return OO.GetResult(); // return the result from oracle query
+    function callOracleRandom() public {
+        OO.requestTemp();
     }
-    
-    // Convert oracle output to uint
-    function callOracleRandomUint() public returns (uint){
-        OO.GetRandom(5);
-        return convertToUint(OO.GetResult());
+
+    function getTempUint() public view returns (uint) {
+        bytes memory res = OO.getTemp();
+        return convertToUint(res);
+    }
+
+    function getTemp() public view returns (bytes memory) {
+        return OO.getTemp();
     }
     
 }

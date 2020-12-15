@@ -2,10 +2,9 @@
 // Contract Address: https://rinkeby.etherscan.io/address/0x648a8087721bb3f68d2e9217a55850bfacece905
 //const contract_address = '0x648a8087721bb3f68d2e9217a55850bfacece905';
 
-// PD-8 Address with Oracle: https://rinkeby.etherscan.io/address/0xC91aed29Cb3fF5Af52c901DE1d5de4f4aaBb9CE6
-// Ormr deployed at: 0xC91aed29Cb3fF5Af52c901DE1d5de4f4aaBb9CE6 <- our main contract using the oracle
-// Oracle deployed at: 0xeEf6C53642DC0dCe833941D7D143e2799FeB3371 <- oracle contract
-const contract_address = '0xC91aed29Cb3fF5Af52c901DE1d5de4f4aaBb9CE6';
+// PD-8 Address with Oracle: https://rinkeby.etherscan.io/address/0xf6e77E6941fCdb6F7116F22BCF853B04031D3169
+// Ormr deployed at: 0xeF59c70570785B74D1c53745e5A31892f4eD56AF <- our main contract using the oracle
+const contract_address = '0xf6e77E6941fCdb6F7116F22BCF853B04031D3169';
 
 // Compile your contract in remix, then go to the .JSON artifact and ABI will be there. OR truffle build/contracts folder.
 
@@ -168,213 +167,223 @@ const contract_address = '0xC91aed29Cb3fF5Af52c901DE1d5de4f4aaBb9CE6';
 // 	}
 // ];
 
+/***/
 // ABI for PD-8 Oracle
 const abi = [
-    {
-      "inputs": [],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "name": "encounterResult",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_name",
-          "type": "string"
-        }
-      ],
-      "name": "createHero",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "getHero",
-      "outputs": [
-        {
-          "components": [
-            {
-              "internalType": "string",
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "internalType": "uint256",
-              "name": "power",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "health",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "bank",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct Hero",
-          "name": "",
-          "type": "tuple"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [],
-      "name": "getHeroes",
-      "outputs": [
-        {
-          "components": [
-            {
-              "internalType": "string",
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "internalType": "uint256",
-              "name": "power",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "health",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "bank",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct Hero[]",
-          "name": "",
-          "type": "tuple[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [],
-      "name": "createDragon",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "getDragon",
-      "outputs": [
-        {
-          "components": [
-            {
-              "internalType": "string",
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "internalType": "address",
-              "name": "id",
-              "type": "address"
-            },
-            {
-              "internalType": "uint256",
-              "name": "power",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "health",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "goldReward",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct Dragon",
-          "name": "",
-          "type": "tuple"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [],
-      "name": "startEncounter",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes",
-          "name": "input",
-          "type": "bytes"
-        }
-      ],
-      "name": "convertToUint",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "pure",
-      "type": "function",
-      "constant": true
-    },
-    {
-      "inputs": [],
-      "name": "callOracleRandom",
-      "outputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        }
-      ],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "callOracleRandomUint",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }
-  ];
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "name": "encounterResult",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      }
+    ],
+    "name": "createHero",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getHero",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "power",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "health",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bank",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Hero",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "getHeroes",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "power",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "health",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bank",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Hero[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "createDragon",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDragon",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "id",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "power",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "health",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "goldReward",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Dragon",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "startEncounter",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "input",
+        "type": "bytes"
+      }
+    ],
+    "name": "convertToUint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "callOracleRandom",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTempUint",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "getTemp",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  }
+];
 
 var contract;
 var accounts;
@@ -398,6 +407,7 @@ window.addEventListener('load', asyncloaded);
 function createHero() {
     var heroName = document.getElementById('heroName').value;
     contract.methods.createHero(heroName).send({from: accounts[0]}).then(x => console.log(x));
+    document.getElementById('heroName').value = '';
 }
 
 // Get our hero.
@@ -440,23 +450,24 @@ async function getDragon() {
 // Fight! Has to be async because we have to wait for the contract/blockchain to return something
 async function startEncounter() {
 	document.getElementById('encounterResult').innerText = 'Stand by while your hero is fighting a dragon⚔️🐉';
-    var result = await contract.methods.startEncounter().send({from: accounts[0]}).then(x => {console.log(x); return x});
+  var result = await contract.methods.startEncounter().send({from: accounts[0]}).then(x => {console.log(x); return x});
 	console.log(result);
 	document.getElementById('encounterResult').innerText = result.events.encounterResult.returnValues[0];
 	alert('Outcome: ' + result.events.encounterResult.returnValues[0]);
 }
 
 // PD-8 Oracle
-// Call our oracle and get the raw result
+// Call our oracle and get the converted result (bytes to uint)
 async function callOracleRandom() {
-    var result = await contract.methods.callOracleRandom().send({from: accounts[0]}).then(x => {console.log(x); return x});
-	console.log('Oracle Result ' + result[0]);
-	document.getElementById('OracleRandom').innerText = result;
+  await contract.methods.callOracleRandom().send({from: accounts[0]}).then(x => {console.log(x); return x}); // calls oracle
+	document.getElementById('OracleRandom').innerText = 'Oracle called, please wait up to 60 seconds before pressing "Get Result"';
 }
 
-// Call our oracle and convert the result to uint
-async function callOracleRandomUint() {
-    var result = await contract.methods.callOracleRandomUint().send({from: accounts[0]}).then(x => {console.log(x); return x});
-	console.log('Oracle Result Converted ' + result);
-	document.getElementById('OracleRandomUint').innerText = result;
-}
+// directly access variable
+async function getTemp() {
+  var result = await contract.methods.getTemp().call().then(x => {console.log(x); return x});
+  document.getElementById('tempRaw').innerText = result;
+  var resUint = await contract.methods.getTempUint().call().then(x => {console.log(x); return x}); // convert result
+  document.getElementById('OracleRandom').innerText = resUint
+
+} 
