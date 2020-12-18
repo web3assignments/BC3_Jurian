@@ -457,9 +457,9 @@ async function startEncounter() {
 }
 
 // PD-8 Oracle
-// Call our oracle and get the converted result (bytes to uint)
+// Call our oracle
 async function callOracleRandom() {
-  await contract.methods.callOracleRandom().send({from: accounts[0]}).then(x => {console.log(x); return x}); // calls oracle
+  await contract.methods.callOracleRandom().send({from: accounts[0], value: web3.utils.toWei('0.1', 'ether')}).then(x => {console.log(x); return x}); // calls oracle
 	document.getElementById('OracleRandom').innerText = 'Oracle called, please wait up to 60 seconds before pressing "Get Result"';
 }
 
