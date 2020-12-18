@@ -89,8 +89,8 @@ contract Ormr {
     }
 
     // Check oracle output
-    function callOracleRandom() public {
-        OO.requestTemp();
+    function callOracleRandom() public payable {
+        OO.requestTemp{value: msg.value}();
     }
 
     function getTempUint() public view returns (uint) {
