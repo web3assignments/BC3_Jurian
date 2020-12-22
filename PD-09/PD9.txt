@@ -11,9 +11,9 @@ Update your smart contract with 3 of the following:
 - add a selfdestruct function;
 - if you use send or transfer, replace it with call;
 - add natspec comments ✔️ (https://github.com/OpenZeppelin/solidity-docgen/blob/master/README.md#contracts-with-dependendencies
-stap voor stap:
+walkthrough:
 1: npm install solidity-docgen
 2: npm install solc-0.8.0@npm:solc@0.8.0 (you need to use an alias to select compiler version for the next command)
 3: npx solidity-docgen --solc-module solc-0.8.0
-4: NatSpec comments added! find them in ./docs)
+4: NatSpec comments generated! find them in ./docs)
 - add safemath ✔️ (sol 0.8.0)
