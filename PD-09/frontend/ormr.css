@@ -1,0 +1,14 @@
+#Welcome-Ormr{
+    background-image: url("https://www.imperial-library.info/sites/default/files/imagecache/node-gallery-display/artsk_dragon02.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 30%;
+}
+
+#Welcome-Ormr h1{
+    color:white;
+}
+
+#Welcome-Ormr p{
+    color:white;
+}
