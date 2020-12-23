@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: MIT 
 pragma solidity >=0.4.21 <=0.8.0;
+import './Initializable.sol';
 
-contract Migrations {
+contract Migrations is Initializable {
   address public owner;
   uint public last_completed_migration;
 
-  constructor() {
+  function initialize() public initializer() {
     owner = msg.sender;
   }
 

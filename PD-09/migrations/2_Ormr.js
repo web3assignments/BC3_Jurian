@@ -1,12 +1,12 @@
+// PD-9 OpenZeppelin Upgrade
+var { deployProxy } = require('@openzeppelin/truffle-upgrades');
+
 var Migrations = artifacts.require("Migrations");
 var DragonFactory = artifacts.require("DragonFactory");
 var HeroFactory = artifacts.require("HeroFactory");
 var Ormr = artifacts.require("Ormr");
 // PD-8 Oracle
 var Oracle = artifacts.require("OrmrOracle");
-
-// PD-9 OpenZeppelin Upgrade
-var { deployProxy } = require('@openzeppelin/truffle-upgrades');
 
 module.exports = async function(deployer) {
     await deployer.deploy(Migrations);
@@ -28,3 +28,19 @@ module.exports = async function(deployer) {
     console.log(`Ormr deployed at: ${Ormr.address}`);
     console.log(`Oracle deployed at: ${Oracle.address}`);
 }
+
+// !PD-9 migration error: https://i.imgur.com/pieRiIf.png W.I.P!
+// module.exports = async function(deployer) {
+//     const MigrationsContract = await deployProxy(Migrations, { deployer });
+//     const DragonFactoryContract = await deployProxy(DragonFactory, { deployer, unsafeAllowCustomTypes:true });
+//     const HeroFactoryContract = await deployProxy(HeroFactory, { deployer, unsafeAllowCustomTypes:true });
+//     const OracleContract = await deployProxy(Oracle, { deployer });
+//     const OrmrContract = await deployProxy(Ormr, { deployer, unsafeAllowCustomTypes:true });
+
+//     console.log(`Migrations deployed at: ${MigrationsContract.address}`);
+//     console.log(`DragonFactory deployed at: ${DragonFactoryContract.address}`);
+//     console.log(`HeroFactory deployed at: ${HeroFactoryContract.address}`);
+//     console.log(`Ormr deployed at: ${OrmrContract.address}`);
+//     console.log(`Oracle deployed at: ${OracleContract.address}`);
+
+// }

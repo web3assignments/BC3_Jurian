@@ -4,37 +4,48 @@ pragma abicoder v2;
 
 import "./SimpleFactory.sol";
 import "./Hero.sol";
+import './Initializable.sol';
 
-// Responsible for creating the hero our players can play with!
-contract HeroFactory is SimpleFactory {
-    // Events
+/// @title Ormr, Man vs. Dragon
+/// @author github@ToFat4Fun
+/// @notice Responsible for creating the hero our players can play with!
+/// @dev Working with solidity v0.8.0, creates heroes
+contract HeroFactory is SimpleFactory, Initializable {
+    /// @dev emits a newly created hero
     event newHero(uint256 heroId, string name);
 
-    // Mappings
+    /// @dev these mappings allow linking and looking up heroes that are stored in the contract
+    /// with the address of users. OwnerToHeroCount enforces a maximum number of heroes per address
     mapping(uint256 => address) heroToOwner;
     mapping(address => uint256) heroLookup;
     mapping(address => uint256) ownerHeroCount;
 
-    // Variables
+    /// @dev determine the maximum length of power and health
     uint256 heroPowerModulus = 10**5; // Max 5 digits
     uint256 heroHealthModulus = 10**7; // Max 7 digits.
     Hero hero;
 
-    // Keep a list of all existing heroes in the contract.
+    /// @dev keep a list of all existing heroes in the contract.
     Hero[] heroes;
 
-    // Getters and Setters
+    function initialize() public initializer { }
+    
+    /// @param sender address of the person interacting with the contract
+    /// @return hero object that corresponds with the given sender address
     function getHero(address sender) public view returns (Hero memory) {
-        require((heroes.length > 0), "No heroes available for lookup."); // Check if there are heroes.
+        require((heroes.length > 0), "No heroes available for lookup."); 
         return heroes[heroLookup[sender]];
     }
 
+    /// @return array of all heroes in the contract
     function getHeroes() public view returns (Hero[] memory) {
-        require((heroes.length > 0), "No heroes available for lookup."); // Check if there are heroes.
+        require((heroes.length > 0), "No heroes available for lookup.");
         return heroes;
     }
 
-    // Internal function which creates the hero.
+    /// @dev Internal function which creates the hero.
+    /// @param _name the hero name submitted by the user
+    /// @param sender the user's address which we use to link the user and the hero
     function _createHero(string memory _name, address sender) internal {
         heroes.push(
             Hero({
@@ -51,39 +62,23 @@ contract HeroFactory is SimpleFactory {
         emit newHero(id, _name);
     }
 
-    // The player interacts with the contract through this method to create a hero, which checks if they already have a hero.
+    /// @dev The player interacts with the contract through this method to create a hero, which checks if they already have a hero.
+    /// @param _name name submitted by the user
+    /// @param sender the user's address which we use to check if a user already has a hero
     function createHero(string memory _name, address sender) public {
-        require((ownerHeroCount[sender] == 0), "You already created a hero!"); // Can only have one hero!
+        require((ownerHeroCount[sender] == 0), "You already created a hero!");
         _createHero(_name, sender);
     }
 
-    // Semi-Random number generator. W.I.P
-    // Determines hero power.
+    /// @dev Semi-Random number generator.Determines heropower
+    /// @return returns hero power
     function randomPower() internal view override returns (uint256) {
-        return
-            uint256(
-                keccak256(
-                    abi.encodePacked(
-                        block.timestamp,
-                        block.difficulty,
-                        block.coinbase
-                    )
-                )
-            ) % heroPowerModulus;
+        return uint256(keccak256(abi.encodePacked(block.timestamp, block.difficulty, block.coinbase))) % heroPowerModulus;
     }
 
-    // Semi-Random number generator. W.I.P
-    // Determines hero health.
+    /// @dev Semi-Random number generator.Determines herohealth
+    /// @return returns hero health
     function randomHealth() internal view override returns (uint256) {
-        return
-            uint256(
-                keccak256(
-                    abi.encodePacked(
-                        block.timestamp,
-                        block.difficulty,
-                        block.coinbase
-                    )
-                )
-            ) % heroHealthModulus;
+        return uint256(keccak256(abi.encodePacked(block.timestamp, block.difficulty, block.coinbase))) % heroHealthModulus;
     }
 }

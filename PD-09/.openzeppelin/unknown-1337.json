@@ -1,0 +1,61 @@
+{
+  "manifestVersion": "3.1",
+  "impls": {
+    "0df8f0c8561e4594c9fb53bcf7b8f98903486239d93fb5463fb4820179e99126": {
+      "address": "0xA7b4086F11F8D4d80a05ad07C796ee6Af7B7a6C7",
+      "txHash": "0x3782aca0c7dea347c3c014192b0af14f034524a32329138b985d5e5bf4e539aa",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:23"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initializing",
+            "type": "t_bool",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:28"
+          },
+          {
+            "contract": "Initializable",
+            "label": "______gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:63"
+          },
+          {
+            "contract": "Migrations",
+            "label": "owner",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Migrations.sol:6"
+          },
+          {
+            "contract": "Migrations",
+            "label": "last_completed_migration",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Migrations.sol:7"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    }
+  },
+  "admin": {
+    "address": "0x1C42aaDDFc05D88177058CDc04Fd9A30Bd45Ac9A",
+    "txHash": "0x5b60ccb3a94a618c6c1e717852f7fc8a5a3d71ed3af1e5c68d6005ef7a06b954"
+  }
+}

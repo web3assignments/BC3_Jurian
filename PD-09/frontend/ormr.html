@@ -25,12 +25,12 @@
                 <h3>Create your hero!</h3>
                 <label for="heroName">Name:</label>
                 <input type="text" id="heroName" name="heroName" placeholder="enter hero name"><br><br>
-                <button value="heroName" type="button" onClick='createHero()'>Create Hero</button> 
+                <button value="heroName" type="button" class="btn success" onClick='createHero()'>Create Hero</button> 
               </div>
               <div class="col-sm-4">
                 <h3>Get your hero!</h3>
               </br>
-                <button id="getHero" type="button" onClick='getHero()'>Get Hero</button> 
+                <button id="getHero" type="button" class="btn info" onClick='getHero()'>Get Hero</button> 
               </br>
                 <label>Hero Name:</label>
                 <p id="getHeroName"></p>
@@ -46,7 +46,7 @@
                 <h3>Load all heroes</h3>
                 <label>Load all known heroes in the contract</label>
                 <br><br>
-                <button id="getHero" type="button" onClick='getHeroes()'>Get Heroes</button> 
+                <button id="getHero" type="button" class="btn info" onClick='getHeroes()'>Get Heroes</button> 
               </br>
               <div class="col-sm-4" id="allHeroes">
               </div>
@@ -65,7 +65,7 @@
              <div class="col-sm-6">
               <h3>Reveal the dragon!</h3>
               <br><br>
-              <button type="button" onClick='getDragon()'>Get Dragon</button>
+              <button type="button" class="btn info" onClick='getDragon()'>Get Dragon</button>
               </br>
               <label>Dragon Name:</label>
               <p id="getDragonName"></p>
@@ -80,11 +80,11 @@
           <div class="row">
               <div class="col-sm-6">
                 <h3>Start Encounter!</h3>
-                <button type="button" onClick="startEncounter()">Fight!⚔️</button>
+                <button type="button" class="btn warning" onClick="startEncounter()" title="bring a knife to a dragonfight">Fight!⚔️</button>
               </div>
               <div class="col-sm-6">
                 <h3>Encounter Result</h3>
-                <p id="encounterResult">Start an encounter by approving the metamask transaction after clicking the button!⚔</p>
+                <p id="encounterResult">Start an encounter by approving the metamask transaction after clicking the Fight!⚔ button!</p>
               </div>
           </div>
       </div>
@@ -93,10 +93,22 @@
         <div class="row">
           <div class="col-sm-6">
             <h3>Oracle Test Buttons. Logged in console!</h3>
-            <button type="button" onClick="callOracleRandom()">Call Oracle</button>
+            <button type="button" class="btn info" onClick="callOracleRandom()" title="calls the oracle, make sure you have 0.1ETH">Call Oracle</button>
             <p id="OracleRandom"></p>
-            <button type="button" onClick="getTemp()">Get Result</button>
+            <button type="button" class="btn warning" onClick="getTemp()" title="please wait up to 60 seconds before clicking">Get Result</button>
             <p id="tempRaw"></p>
+          </div>
+        </div>
+      </div>
+      <!--PD-9-->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>PD-9 selfdestruct and modifier testing</h3>
+            <button type="button" class="btn info" onClick="ownerSays()" title="are you?">Are you the boss?</button>
+            <p id="ownerSays"></p>
+            <button type="button" class="btn danger" onClick="selfdestruct()" title="only the owner can do this">Selfdestruct</button>
+            <p id="selfdestruct"></p>
           </div>
         </div>
       </div>

@@ -472,3 +472,16 @@ async function getTemp() {
   document.getElementById('OracleRandom').innerText = resUint
 
 } 
+
+// PD-9 modifier OwnerSays function; only contract owner should be able to call this
+async function ownerSays() {
+  var result = await contract.methods.ownerSays().call().then(x => {console.log(x); return x});
+  document.getElementById('ownerSays').innerText = result; //result.value?
+}
+
+// PD-9 selfdestruct calls for the destruction of the contract! only the owner should be able to request this
+async function selfdestruct() {
+  console.log(`initiating self-destruct for ${contract_address}, stand by`);
+  var result = await contract.methods.destroy().send({from: accounts[0]}).then(x => {console.log(x); return x});
+  document.getElementById('selfdestruct').innerText = result; //result.value?
+}

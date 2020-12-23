@@ -1,0 +1,17 @@
+const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
+var Ormr = artifacts.require("Ormr");
+//var NewVersionExample = artifacts.require("NewVersionExample");
+
+module.exports = async function(deployer) {    
+    const existingOrmr = await Ormr.deployed();
+    const newOrmr = await upgradeProxy(existingOrmr.address, Ormr,{ deployer });
+
+    console.log(`Address of existingOrmr: ${existingOrmr.address}`)
+    console.log(`Address of newOrmr: ${newOrmr.address}`)
+
+    // Example Interaction
+    // await NewVersionExampleContract.set(5)
+    // var bnx = await NewVersionExampleContract.result() // note result is Big Number
+    // console.log(`Called function set(5), X is now ${bnx.toString()}`);
+
+}

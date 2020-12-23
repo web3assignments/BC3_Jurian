@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-pragma abicoder v2; // To fix a type-error we need to enable this.
+pragma abicoder v2;
 
 import "./HeroFactory.sol";
 import "./DragonFactory.sol";
@@ -9,75 +9,107 @@ import "./Hero.sol";
 import "./OrmrOracle.sol";
 import './Initializable.sol';
 
-// This Contract is supposed to become a game where our hero is fighting dragons.
+/// @title Ormr, Man vs. Dragon
+/// @author github@ToFat4Fun
+/// @notice Calling the Oracle might take a few seconds to minutes, depending on block processing speed.
+/// @dev Working with solidity v0.8.0
 contract Ormr is Initializable {
-    //Events. PD-3 Events.
-    event encounterResult(string); // Emit the result of a battle.
+    /// @dev emits the result of the battle initiated by the user. shows in front-end
+    event encounterResult(string);
 
-    // Variables
+    /// @dev HF herofactory we use to create heroes     
+    /// @dev DF dragonfactory we use to create dragons
+    /// @dev OO oracle we call for our random functions 
     HeroFactory HF;
     DragonFactory DF;
     OrmrOracle OO;
+    address public owner = msg.sender; // PD-9 Modifier
 
-    // Called once at deployment of the contract.
-    constructor() {
+    // PD-9 upgrades. Replace constructor with openzeppelin initialize.
+    function initialize() public initializer {
         HF = new HeroFactory();
         DF = new DragonFactory();
         OO = new OrmrOracle();
     }
 
-    // Hero logic
+    // PD-9 Modifier
+    /// @dev modifier that specifies only the contract owner (address which deployed it) can access a function
+    /// More info: https://docs.soliditylang.org/en/v0.8.0/structure-of-a-contract.html?highlight=modifier#function-modifiers and
+    /// https://docs.soliditylang.org/en/develop/common-patterns.html#restricting-access 
+    modifier onlyOwner
+    {
+        require(
+            msg.sender == owner,
+            "Sender not authorized."
+        );
+        // Do not forget the "_;"! It will
+        // be replaced by the actual function
+        // body when the modifier is used.
+        _;
+    }
+
+    /// @dev function to demonstrate the modifier for PD-9
+    /// @return messageFromOwner our owner left a message reminding himself he's the boss
+    function ownerSays() public view onlyOwner returns (string memory messageFromOwner) {
+        return "I am the owner of this contract! And no one else!";
+    }
+
+    /// @dev PD-9 selfdestruct method. More info: https://docs.soliditylang.org/en/v0.8.0/contracts.html#modifiers 
+    /// only the contract owner may call this method
+    function destroy() public onlyOwner {
+        selfdestruct(payable(owner));
+    }
+
+    /// @dev below follows the game logic of creating heroes and dragons, combat and handling Oracle requests
+    /// @param _name heroname given by the user
     function createHero(string memory _name) public {
         HF.createHero(_name, msg.sender);
     }
 
+    /// @return return hero associated with the user requesting the address
     function getHero() public view returns (Hero memory) {
         return HF.getHero(msg.sender);
     }
 
+    /// @return returns all heroes in array form
     function getHeroes() public view returns (Hero[] memory) {
         return HF.getHeroes();
     }
 
-    //Dragon logic
+    /// @dev creates a dragon using dragonfactory
     function createDragon() public {
         DF.createDragon();
     }
 
+    /// @return returns dragon object
     function getDragon() public view returns (Dragon memory) {
         return DF.getDragon();
     }
 
-    // This is the function our user sees when starting a battle.
+    /// @notice here you can initiate a battle! make sure there is both a dragon and hero
+    /// @dev This is the function our user sees when starting a battle.
     function startEncounter() public {
-        // Create checks to check whether a hero and dragon are available.
-        _encounter(HF.getHero(msg.sender), DF.getDragon()); // Increase gas limit in remix.
+        // Calls internal function which handles the encounter
+        _encounter(HF.getHero(msg.sender), DF.getDragon());
     }
 
-    // Lock in our Hero and the Dragon. Emits the result of the encounter.
+    /// @dev Lock in our Hero and the Dragon. Emits the result of the encounter.
+    /// @param _hero the user's hero
+    /// @param _dragon a dragon from within the contract
     function _encounter(Hero memory _hero, Dragon memory _dragon) internal {
         // Check if there are both a hero and a dragon. Require keyword and ternary operator. PD-3 Error Handling.
-        require(
-            keccak256(abi.encodePacked(_hero.name)) !=
-                keccak256(abi.encodePacked("")),
-            "Hero not found"
-        );
-        require(
-            keccak256(abi.encodePacked(_dragon.name)) !=
-                keccak256(abi.encodePacked("")),
-            "Dragon not found"
-        );
+        require(keccak256(abi.encodePacked(_hero.name)) != keccak256(abi.encodePacked("")), "Hero not found");
+        require(keccak256(abi.encodePacked(_dragon.name)) !=keccak256(abi.encodePacked("")), "Dragon not found");
 
-        // Fight!
-        emit encounterResult(_battle(_hero.power, _dragon.power)); // Emit our event containing result of battle..
+        // calls the method which decides a winner, emits the result afterwards
+        emit encounterResult(_battle(_hero.power, _dragon.power));
     }
 
-    // Determine who wins the fight.
-    function _battle(uint256 heroPower, uint256 dragonPower)
-        private
-        pure
-        returns (string memory)
-    {
+    /// @dev here is decided who is stronger
+    /// @param heroPower hero power
+    /// @param dragonPower dragon power
+    /// @return the outcome of the battle as string format
+    function _battle(uint256 heroPower, uint256 dragonPower) private pure returns (string memory) {
         if (heroPower > dragonPower) {
             return "The dragon has been slain!";
         } else if (heroPower < dragonPower) {
@@ -88,10 +120,11 @@ contract Ormr is Initializable {
         }
     }
 
-    // Let's do something with our Oracle here.
-
-    // Web3examples convert to uint https://github.com/web3examples/ethereum/blob/master/solidity_examples/bytes2uint.sol
-    // Because we need a uint for our hero and dragon creation and our Oracle returns bytes, let's convert it here.
+    /// @dev Let's do something with our Oracle here. Because we want to display uint to the user and our Oracle
+    /// returns bytes format, let's convert it here.
+    /// Web3examples convert to uint https://github.com/web3examples/ethereum/blob/master/solidity_examples/bytes2uint.sol
+    /// @param input the bytes we want to convert to uint
+    /// @return the converted bytes value as uint
     function convertToUint(bytes memory input) public pure returns (uint256) {
         uint256 res = 0;
         for (uint256 i = 0; i < input.length; i++)
@@ -99,16 +132,23 @@ contract Ormr is Initializable {
         return res;
     }
 
-    // Check oracle output
+    /// @dev call the oracle using OrmrOracle instance, we need to send ETH as subsequent requests to provable are not free
+    /// hence the payable attribute and value: msg.value object
     function callOracleRandom() public payable {
         OO.requestTemp{value: msg.value}();
     }
 
+    /// @dev only request AFTER the oracle has been called (and wait atleast 2 blocks for the result + callback)
+    /// otherwise it will return NULL and undefined. This method also converts the result to uint right away for display in the front-end
+    /// @return returns the result of the oracle call as uint
     function getTempUint() public view returns (uint256) {
         bytes memory res = OO.getTemp();
         return convertToUint(res);
     }
 
+    /// @dev only request AFTER the oracle has been called (and wait atleast 2 blocks for the result + callback)
+    /// otherwise it will return NULL and undefined. This method also converts the result to uint right away for display in the front-end
+    /// @return returns the result of the oracle call as bytes
     function getTemp() public view returns (bytes memory) {
         return OO.getTemp();
     }
