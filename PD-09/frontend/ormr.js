@@ -2,9 +2,9 @@
 // Contract Address: https://rinkeby.etherscan.io/address/0x648a8087721bb3f68d2e9217a55850bfacece905
 //const contract_address = '0x648a8087721bb3f68d2e9217a55850bfacece905';
 
-// PD-8 Address with Oracle: https://rinkeby.etherscan.io/address/0x44a55d179c3327Bf9B1f2Dd1b96760C7932D2394
-// Ormr deployed at: 0x82f3a214EFdc1Fb6FE9c3Ea35d9D70D37892E01E <- our main contract using the oracle
-const contract_address = '0x82f3a214EFdc1Fb6FE9c3Ea35d9D70D37892E01E';
+// PD-8 Address with Oracle: https://rinkeby.etherscan.io/address/0x736e5A4ec1cFB2FBA2d6A02d768df9844fd24e2A
+// Ormr deployed at: 0x736e5A4ec1cFB2FBA2d6A02d768df9844fd24e2A <- our main contract using the oracle
+const contract_address = '0x736e5A4ec1cFB2FBA2d6A02d768df9844fd24e2A';
 
 // Compile your contract in remix, then go to the .JSON artifact and ABI will be there. OR truffle build/contracts folder.
 
@@ -171,11 +171,6 @@ const contract_address = '0x82f3a214EFdc1Fb6FE9c3Ea35d9D70D37892E01E';
 // ABI for PD-8 Oracle and higher versions
 const abi = [
     {
-      "inputs": [],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
       "anonymous": false,
       "inputs": [
         {
@@ -187,6 +182,41 @@ const abi = [
       ],
       "name": "encounterResult",
       "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ownerSays",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "messageFromOwner",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [

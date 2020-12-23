@@ -4,8 +4,8 @@ pragma abicoder v2;
 
 import "./HeroFactory.sol";
 import "./DragonFactory.sol";
-import "./Dragon.sol";
-import "./Hero.sol";
+// import './Hero.sol';
+// import './Dragon.sol';
 import "./OrmrOracle.sol";
 import './Initializable.sol';
 
@@ -23,13 +23,14 @@ contract Ormr is Initializable {
     HeroFactory HF;
     DragonFactory DF;
     OrmrOracle OO;
-    address public owner = msg.sender; // PD-9 Modifier
+    address public owner; // PD-9 Modifier
 
     // PD-9 upgrades. Replace constructor with openzeppelin initialize.
     function initialize() public initializer {
         HF = new HeroFactory();
         DF = new DragonFactory();
         OO = new OrmrOracle();
+        owner = msg.sender;
     }
 
     // PD-9 Modifier
@@ -56,9 +57,10 @@ contract Ormr is Initializable {
 
     /// @dev PD-9 selfdestruct method. More info: https://docs.soliditylang.org/en/v0.8.0/contracts.html#modifiers 
     /// only the contract owner may call this method
-    function destroy() public onlyOwner {
-        selfdestruct(payable(owner));
-    }
+    /// Not allowed when using OpenZeppelin, see: https://zpl.in/upgrades/error-003 
+    // function destroy() public onlyOwner {
+    //     selfdestruct(payable(owner));
+    // }
 
     /// @dev below follows the game logic of creating heroes and dragons, combat and handling Oracle requests
     /// @param _name heroname given by the user

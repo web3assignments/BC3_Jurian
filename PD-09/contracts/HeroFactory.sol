@@ -2,15 +2,24 @@
 pragma solidity >=0.8.0;
 pragma abicoder v2;
 
-import "./SimpleFactory.sol";
-import "./Hero.sol";
+import './SimpleFactory.sol';
 import './Initializable.sol';
+
+/// @dev struct defined here to allow code re-usage: https://docs.soliditylang.org/en/v0.8.0/types.html#structs 
+/// this model will be used as hero throughout the app
+struct Hero {
+    string name;
+    uint256 power;
+    uint256 health;
+    uint256 bank;
+}
 
 /// @title Ormr, Man vs. Dragon
 /// @author github@ToFat4Fun
 /// @notice Responsible for creating the hero our players can play with!
 /// @dev Working with solidity v0.8.0, creates heroes
 contract HeroFactory is SimpleFactory, Initializable {
+
     /// @dev emits a newly created hero
     event newHero(uint256 heroId, string name);
 
@@ -21,14 +30,17 @@ contract HeroFactory is SimpleFactory, Initializable {
     mapping(address => uint256) ownerHeroCount;
 
     /// @dev determine the maximum length of power and health
-    uint256 heroPowerModulus = 10**5; // Max 5 digits
-    uint256 heroHealthModulus = 10**7; // Max 7 digits.
+    uint256 heroPowerModulus;
+    uint256 heroHealthModulus;
     Hero hero;
 
     /// @dev keep a list of all existing heroes in the contract.
     Hero[] heroes;
 
-    function initialize() public initializer { }
+    function initialize() public initializer { 
+        heroPowerModulus = 10 ** 5;
+        heroHealthModulus = 10 ** 7;
+    }
     
     /// @param sender address of the person interacting with the contract
     /// @return hero object that corresponds with the given sender address
