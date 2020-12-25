@@ -3,8 +3,8 @@
 //const contract_address = '0x648a8087721bb3f68d2e9217a55850bfacece905';
 
 // For PD-8 and higher
-// Ormr deployed at: https://rinkeby.etherscan.io/address/0x7dd14c8dAcF9e734B2EE21916bFBe86526969E3B 
-const contract_address = '0x7dd14c8dAcF9e734B2EE21916bFBe86526969E3B';
+// Ormr deployed at: https://rinkeby.etherscan.io/address/0x54bc5Db7fF816f8bE77E3d0EB708b03f33A65843 
+const contract_address = '0x54bc5Db7fF816f8bE77E3d0EB708b03f33A65843';
 
 // Compile your contract in remix, then go to the .JSON artifact and ABI will be there. OR truffle build/contracts folder.
 
@@ -180,6 +180,19 @@ const abi = [
           "type": "string"
         }
       ],
+      "name": "OwnerSaysResponse",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
       "name": "encounterResult",
       "type": "event"
     },
@@ -235,16 +248,9 @@ const abi = [
     {
       "inputs": [],
       "name": "ownerSays",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "messageFromOwner",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
       "inputs": [
@@ -525,15 +531,16 @@ async function callOracleRandom() {
 // directly access variable
 async function getTemp() {
   var result = await contract.methods.getTemp().call().then(x => {console.log(x); return x});
-  document.getElementById('tempRaw').innerText = result;
-  var resUint = await contract.methods.getTempUint().call().then(x => {console.log(x); return x}); // convert result
-  document.getElementById('OracleRandom').innerText = resUint
+  document.getElementById('tempRaw').innerText = result; // raw bytes/hex result
+  var resUint = await contract.methods.getTempUint().call().then(x => {console.log(x); return x}); // converted result
+  document.getElementById('OracleRandom').innerText = resUint // replace text with the result
 } 
 
 // PD-9 modifier OwnerSays function; only contract owner should be able to call this
+// note: error message won't show unless we use .call(from: accounts[0]). https://ethereum.stackexchange.com/a/50972 
 async function ownerSays() {
-  var result = await contract.methods.ownerSays().call().then(x => {console.log(x); return x});
-  document.getElementById('ownerSays').innerText = result;
+  var result = await contract.methods.ownerSays().send({from: accounts[0]}).then(x => {console.log(x); return x});
+	document.getElementById('ownerSays').innerText = result.events.OwnerSaysResponse.returnValues[0];
 }
 
 async function getOwner() {

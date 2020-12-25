@@ -15,15 +15,15 @@
     "absolutePath": "/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/SimpleFactory.sol",
     "exportedSymbols": {
       "SimpleFactory": [
-        998
+        1007
       ]
     },
-    "id": 999,
+    "id": 1008,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 951,
+        "id": 960,
         "literals": [
           "solidity",
           ">=",
@@ -34,7 +34,7 @@
         "src": "33:24:6"
       },
       {
-        "id": 952,
+        "id": 961,
         "literals": [
           "abicoder",
           "v2"
@@ -48,22 +48,22 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 953,
+          "id": 962,
           "nodeType": "StructuredDocumentation",
           "src": "82:249:6",
           "text": "@title Ormr, Man vs. Dragon\n @author github@ToFat4Fun\n @notice Abstraction of the creation of objects for simplicity in code maintenance\n @dev More info about this pattern: https://refactoring.guru/design-patterns/abstract-factory "
         },
         "fullyImplemented": true,
-        "id": 998,
+        "id": 1007,
         "linearizedBaseContracts": [
-          998
+          1007
         ],
         "name": "SimpleFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 974,
+              "id": 983,
               "nodeType": "Block",
               "src": "850:110:6",
               "statements": [
@@ -76,7 +76,7 @@
                             "arguments": [
                               {
                                 "expression": {
-                                  "id": 964,
+                                  "id": 973,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -87,7 +87,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 965,
+                                "id": 974,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -102,7 +102,7 @@
                               },
                               {
                                 "expression": {
-                                  "id": 966,
+                                  "id": 975,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -113,7 +113,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 967,
+                                "id": 976,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -128,7 +128,7 @@
                               },
                               {
                                 "expression": {
-                                  "id": 968,
+                                  "id": 977,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -139,7 +139,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 969,
+                                "id": 978,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -169,7 +169,7 @@
                                 }
                               ],
                               "expression": {
-                                "id": 962,
+                                "id": 971,
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -180,7 +180,7 @@
                                   "typeString": "abi"
                                 }
                               },
-                              "id": 963,
+                              "id": 972,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -193,7 +193,7 @@
                                 "typeString": "function () pure returns (bytes memory)"
                               }
                             },
-                            "id": 970,
+                            "id": 979,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -216,7 +216,7 @@
                               "typeString": "bytes memory"
                             }
                           ],
-                          "id": 961,
+                          "id": 970,
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -227,7 +227,7 @@
                             "typeString": "function (bytes memory) pure returns (bytes32)"
                           }
                         },
-                        "id": 971,
+                        "id": 980,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -250,7 +250,7 @@
                           "typeString": "bytes32"
                         }
                       ],
-                      "id": 960,
+                      "id": 969,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -262,14 +262,14 @@
                         "typeString": "type(uint256)"
                       },
                       "typeName": {
-                        "id": 959,
+                        "id": 968,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "868:4:6",
                         "typeDescriptions": {}
                       }
                     },
-                    "id": 972,
+                    "id": 981,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -284,42 +284,42 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 958,
-                  "id": 973,
+                  "functionReturnParameters": 967,
+                  "id": 982,
                   "nodeType": "Return",
                   "src": "861:91:6"
                 }
               ]
             },
             "documentation": {
-              "id": 954,
+              "id": 963,
               "nodeType": "StructuredDocumentation",
               "src": "370:407:6",
               "text": "@notice This is the base function for determining power in Ormr\n @dev Semi random number generator, can be overwritten depending on what is needed. e.g. dragon might want different modulus.\n The virtual keyword has to be present since v0.6.0: https://docs.soliditylang.org/en/v0.6.0/060-breaking-changes.html\n @param _power semi-random number that will be used for creation later"
             },
-            "id": 975,
+            "id": 984,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "randomPower",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 955,
+              "id": 964,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "803:2:6"
             },
             "returnParameters": {
-              "id": 958,
+              "id": 967,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 957,
+                  "id": 966,
                   "mutability": "mutable",
                   "name": "_power",
                   "nodeType": "VariableDeclaration",
-                  "scope": 975,
+                  "scope": 984,
                   "src": "837:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -328,7 +328,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 956,
+                    "id": 965,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "837:4:6",
@@ -342,7 +342,7 @@
               ],
               "src": "836:13:6"
             },
-            "scope": 998,
+            "scope": 1007,
             "src": "783:177:6",
             "stateMutability": "view",
             "virtual": true,
@@ -350,7 +350,7 @@
           },
           {
             "body": {
-              "id": 996,
+              "id": 1005,
               "nodeType": "Block",
               "src": "1452:110:6",
               "statements": [
@@ -363,7 +363,7 @@
                             "arguments": [
                               {
                                 "expression": {
-                                  "id": 986,
+                                  "id": 995,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -374,7 +374,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 987,
+                                "id": 996,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -389,7 +389,7 @@
                               },
                               {
                                 "expression": {
-                                  "id": 988,
+                                  "id": 997,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -400,7 +400,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 989,
+                                "id": 998,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -415,7 +415,7 @@
                               },
                               {
                                 "expression": {
-                                  "id": 990,
+                                  "id": 999,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -426,7 +426,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 991,
+                                "id": 1000,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -456,7 +456,7 @@
                                 }
                               ],
                               "expression": {
-                                "id": 984,
+                                "id": 993,
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -467,7 +467,7 @@
                                   "typeString": "abi"
                                 }
                               },
-                              "id": 985,
+                              "id": 994,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -480,7 +480,7 @@
                                 "typeString": "function () pure returns (bytes memory)"
                               }
                             },
-                            "id": 992,
+                            "id": 1001,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -503,7 +503,7 @@
                               "typeString": "bytes memory"
                             }
                           ],
-                          "id": 983,
+                          "id": 992,
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -514,7 +514,7 @@
                             "typeString": "function (bytes memory) pure returns (bytes32)"
                           }
                         },
-                        "id": 993,
+                        "id": 1002,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -537,7 +537,7 @@
                           "typeString": "bytes32"
                         }
                       ],
-                      "id": 982,
+                      "id": 991,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -549,14 +549,14 @@
                         "typeString": "type(uint256)"
                       },
                       "typeName": {
-                        "id": 981,
+                        "id": 990,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1470:4:6",
                         "typeDescriptions": {}
                       }
                     },
-                    "id": 994,
+                    "id": 1003,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -571,42 +571,42 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 980,
-                  "id": 995,
+                  "functionReturnParameters": 989,
+                  "id": 1004,
                   "nodeType": "Return",
                   "src": "1463:91:6"
                 }
               ]
             },
             "documentation": {
-              "id": 976,
+              "id": 985,
               "nodeType": "StructuredDocumentation",
               "src": "968:409:6",
               "text": "@notice This is the base function for determining health in Ormr\n @dev Semi random number generator, can be overwritten depending on what is needed. e.g. dragon might want different modulus.\n The virtual keyword has to be present since v0.6.0: https://docs.soliditylang.org/en/v0.6.0/060-breaking-changes.html\n @param _health semi-random number that will be used for creation later"
             },
-            "id": 997,
+            "id": 1006,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "randomHealth",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 977,
+              "id": 986,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1404:2:6"
             },
             "returnParameters": {
-              "id": 980,
+              "id": 989,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 979,
+                  "id": 988,
                   "mutability": "mutable",
                   "name": "_health",
                   "nodeType": "VariableDeclaration",
-                  "scope": 997,
+                  "scope": 1006,
                   "src": "1438:12:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -615,7 +615,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 978,
+                    "id": 987,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1438:4:6",
@@ -629,14 +629,14 @@
               ],
               "src": "1437:14:6"
             },
-            "scope": 998,
+            "scope": 1007,
             "src": "1383:179:6",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           }
         ],
-        "scope": 999,
+        "scope": 1008,
         "src": "331:1240:6"
       }
     ],
@@ -646,15 +646,15 @@
     "absolutePath": "/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/SimpleFactory.sol",
     "exportedSymbols": {
       "SimpleFactory": [
-        998
+        1007
       ]
     },
-    "id": 999,
+    "id": 1008,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 951,
+        "id": 960,
         "literals": [
           "solidity",
           ">=",
@@ -665,7 +665,7 @@
         "src": "33:24:6"
       },
       {
-        "id": 952,
+        "id": 961,
         "literals": [
           "abicoder",
           "v2"
@@ -679,22 +679,22 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 953,
+          "id": 962,
           "nodeType": "StructuredDocumentation",
           "src": "82:249:6",
           "text": "@title Ormr, Man vs. Dragon\n @author github@ToFat4Fun\n @notice Abstraction of the creation of objects for simplicity in code maintenance\n @dev More info about this pattern: https://refactoring.guru/design-patterns/abstract-factory "
         },
         "fullyImplemented": true,
-        "id": 998,
+        "id": 1007,
         "linearizedBaseContracts": [
-          998
+          1007
         ],
         "name": "SimpleFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 974,
+              "id": 983,
               "nodeType": "Block",
               "src": "850:110:6",
               "statements": [
@@ -707,7 +707,7 @@
                             "arguments": [
                               {
                                 "expression": {
-                                  "id": 964,
+                                  "id": 973,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -718,7 +718,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 965,
+                                "id": 974,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -733,7 +733,7 @@
                               },
                               {
                                 "expression": {
-                                  "id": 966,
+                                  "id": 975,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -744,7 +744,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 967,
+                                "id": 976,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -759,7 +759,7 @@
                               },
                               {
                                 "expression": {
-                                  "id": 968,
+                                  "id": 977,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -770,7 +770,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 969,
+                                "id": 978,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -800,7 +800,7 @@
                                 }
                               ],
                               "expression": {
-                                "id": 962,
+                                "id": 971,
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -811,7 +811,7 @@
                                   "typeString": "abi"
                                 }
                               },
-                              "id": 963,
+                              "id": 972,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -824,7 +824,7 @@
                                 "typeString": "function () pure returns (bytes memory)"
                               }
                             },
-                            "id": 970,
+                            "id": 979,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -847,7 +847,7 @@
                               "typeString": "bytes memory"
                             }
                           ],
-                          "id": 961,
+                          "id": 970,
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -858,7 +858,7 @@
                             "typeString": "function (bytes memory) pure returns (bytes32)"
                           }
                         },
-                        "id": 971,
+                        "id": 980,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -881,7 +881,7 @@
                           "typeString": "bytes32"
                         }
                       ],
-                      "id": 960,
+                      "id": 969,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -893,14 +893,14 @@
                         "typeString": "type(uint256)"
                       },
                       "typeName": {
-                        "id": 959,
+                        "id": 968,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "868:4:6",
                         "typeDescriptions": {}
                       }
                     },
-                    "id": 972,
+                    "id": 981,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -915,42 +915,42 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 958,
-                  "id": 973,
+                  "functionReturnParameters": 967,
+                  "id": 982,
                   "nodeType": "Return",
                   "src": "861:91:6"
                 }
               ]
             },
             "documentation": {
-              "id": 954,
+              "id": 963,
               "nodeType": "StructuredDocumentation",
               "src": "370:407:6",
               "text": "@notice This is the base function for determining power in Ormr\n @dev Semi random number generator, can be overwritten depending on what is needed. e.g. dragon might want different modulus.\n The virtual keyword has to be present since v0.6.0: https://docs.soliditylang.org/en/v0.6.0/060-breaking-changes.html\n @param _power semi-random number that will be used for creation later"
             },
-            "id": 975,
+            "id": 984,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "randomPower",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 955,
+              "id": 964,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "803:2:6"
             },
             "returnParameters": {
-              "id": 958,
+              "id": 967,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 957,
+                  "id": 966,
                   "mutability": "mutable",
                   "name": "_power",
                   "nodeType": "VariableDeclaration",
-                  "scope": 975,
+                  "scope": 984,
                   "src": "837:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -959,7 +959,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 956,
+                    "id": 965,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "837:4:6",
@@ -973,7 +973,7 @@
               ],
               "src": "836:13:6"
             },
-            "scope": 998,
+            "scope": 1007,
             "src": "783:177:6",
             "stateMutability": "view",
             "virtual": true,
@@ -981,7 +981,7 @@
           },
           {
             "body": {
-              "id": 996,
+              "id": 1005,
               "nodeType": "Block",
               "src": "1452:110:6",
               "statements": [
@@ -994,7 +994,7 @@
                             "arguments": [
                               {
                                 "expression": {
-                                  "id": 986,
+                                  "id": 995,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -1005,7 +1005,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 987,
+                                "id": 996,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -1020,7 +1020,7 @@
                               },
                               {
                                 "expression": {
-                                  "id": 988,
+                                  "id": 997,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -1031,7 +1031,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 989,
+                                "id": 998,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -1046,7 +1046,7 @@
                               },
                               {
                                 "expression": {
-                                  "id": 990,
+                                  "id": 999,
                                   "name": "block",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -1057,7 +1057,7 @@
                                     "typeString": "block"
                                   }
                                 },
-                                "id": 991,
+                                "id": 1000,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -1087,7 +1087,7 @@
                                 }
                               ],
                               "expression": {
-                                "id": 984,
+                                "id": 993,
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
@@ -1098,7 +1098,7 @@
                                   "typeString": "abi"
                                 }
                               },
-                              "id": 985,
+                              "id": 994,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1111,7 +1111,7 @@
                                 "typeString": "function () pure returns (bytes memory)"
                               }
                             },
-                            "id": 992,
+                            "id": 1001,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1134,7 +1134,7 @@
                               "typeString": "bytes memory"
                             }
                           ],
-                          "id": 983,
+                          "id": 992,
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -1145,7 +1145,7 @@
                             "typeString": "function (bytes memory) pure returns (bytes32)"
                           }
                         },
-                        "id": 993,
+                        "id": 1002,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1168,7 +1168,7 @@
                           "typeString": "bytes32"
                         }
                       ],
-                      "id": 982,
+                      "id": 991,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1180,14 +1180,14 @@
                         "typeString": "type(uint256)"
                       },
                       "typeName": {
-                        "id": 981,
+                        "id": 990,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "1470:4:6",
                         "typeDescriptions": {}
                       }
                     },
-                    "id": 994,
+                    "id": 1003,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1202,42 +1202,42 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 980,
-                  "id": 995,
+                  "functionReturnParameters": 989,
+                  "id": 1004,
                   "nodeType": "Return",
                   "src": "1463:91:6"
                 }
               ]
             },
             "documentation": {
-              "id": 976,
+              "id": 985,
               "nodeType": "StructuredDocumentation",
               "src": "968:409:6",
               "text": "@notice This is the base function for determining health in Ormr\n @dev Semi random number generator, can be overwritten depending on what is needed. e.g. dragon might want different modulus.\n The virtual keyword has to be present since v0.6.0: https://docs.soliditylang.org/en/v0.6.0/060-breaking-changes.html\n @param _health semi-random number that will be used for creation later"
             },
-            "id": 997,
+            "id": 1006,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "randomHealth",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 977,
+              "id": 986,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1404:2:6"
             },
             "returnParameters": {
-              "id": 980,
+              "id": 989,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 979,
+                  "id": 988,
                   "mutability": "mutable",
                   "name": "_health",
                   "nodeType": "VariableDeclaration",
-                  "scope": 997,
+                  "scope": 1006,
                   "src": "1438:12:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1246,7 +1246,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 978,
+                    "id": 987,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1438:4:6",
@@ -1260,14 +1260,14 @@
               ],
               "src": "1437:14:6"
             },
-            "scope": 998,
+            "scope": 1007,
             "src": "1383:179:6",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           }
         ],
-        "scope": 999,
+        "scope": 1008,
         "src": "331:1240:6"
       }
     ],
@@ -1279,7 +1279,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-25T18:00:25.465Z",
+  "updatedAt": "2020-12-25T21:35:00.787Z",
   "devdoc": {
     "author": "github@ToFat4Fun",
     "details": "More info about this pattern: https://refactoring.guru/design-patterns/abstract-factory ",

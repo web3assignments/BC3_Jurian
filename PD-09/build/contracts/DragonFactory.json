@@ -79,8 +79,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -120,8 +119,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -7165,7 +7163,7 @@
         187
       ],
       "SimpleFactory": [
-        998
+        1007
       ]
     },
     "id": 188,
@@ -7198,7 +7196,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 188,
-        "sourceUnit": 999,
+        "sourceUnit": 1008,
         "src": "82:29:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -7353,7 +7351,7 @@
               "id": 16,
               "name": "SimpleFactory",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 998,
+              "referencedDeclaration": 1007,
               "src": "601:13:0"
             },
             "id": 17,
@@ -7362,7 +7360,7 @@
           }
         ],
         "contractDependencies": [
-          998
+          1007
         ],
         "contractKind": "contract",
         "documentation": {
@@ -7375,7 +7373,7 @@
         "id": 187,
         "linearizedBaseContracts": [
           187,
-          998
+          1007
         ],
         "name": "DragonFactory",
         "nodeType": "ContractDefinition",
@@ -8842,7 +8840,7 @@
           },
           {
             "baseFunctions": [
-              975
+              984
             ],
             "body": {
               "id": 160,
@@ -9168,7 +9166,7 @@
           },
           {
             "baseFunctions": [
-              997
+              1006
             ],
             "body": {
               "id": 185,
@@ -9509,7 +9507,7 @@
         187
       ],
       "SimpleFactory": [
-        998
+        1007
       ]
     },
     "id": 188,
@@ -9542,7 +9540,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 188,
-        "sourceUnit": 999,
+        "sourceUnit": 1008,
         "src": "82:29:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9697,7 +9695,7 @@
               "id": 16,
               "name": "SimpleFactory",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 998,
+              "referencedDeclaration": 1007,
               "src": "601:13:0"
             },
             "id": 17,
@@ -9706,7 +9704,7 @@
           }
         ],
         "contractDependencies": [
-          998
+          1007
         ],
         "contractKind": "contract",
         "documentation": {
@@ -9719,7 +9717,7 @@
         "id": 187,
         "linearizedBaseContracts": [
           187,
-          998
+          1007
         ],
         "name": "DragonFactory",
         "nodeType": "ContractDefinition",
@@ -11186,7 +11184,7 @@
           },
           {
             "baseFunctions": [
-              975
+              984
             ],
             "body": {
               "id": 160,
@@ -11512,7 +11510,7 @@
           },
           {
             "baseFunctions": [
-              997
+              1006
             ],
             "body": {
               "id": 185,
@@ -11892,7 +11890,7 @@
         }
       },
       "links": {},
-      "address": "0xE6693E3B55Fa9a2e4E7644587966412FE3AE8F64",
+      "address": "0x134125dD180178e07675A5d3a673eF9535756eaC",
       "transactionHash": "0x4ee956ab4589a4c39238f3a850b1f5982a3882d66ff4ebc76cae0bcefeea98c8"
     },
     "5777": {
@@ -11939,13 +11937,12 @@
         }
       },
       "links": {},
-      "address": "0x9e8f67394D78dEcC4f28BCf5Adda450327f04Cad",
+      "address": "0x519447A9Ac990eE1c681C7f5858800E4D9572f79",
       "transactionHash": "0x0adbd032a82297e844a13d5aeb1ee0d3082e60e59dac2bb5ffb7c5b03266b78a"
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-25T18:03:26.605Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-12-25T21:35:00.752Z",
   "devdoc": {
     "author": "github@ToFat4Fun",
     "details": "Working with solidity v0.8.0, creates dragons",

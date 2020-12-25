@@ -12,8 +12,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -26,16 +25,14 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
       "name": "initialize",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function",
-      "payable": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -83,8 +80,7 @@
       "name": "requestTemp",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function",
-      "payable": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -97,8 +93,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"result\",\"type\":\"string\"}],\"name\":\"__callback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_myid\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"_result\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"_proof\",\"type\":\"bytes\"}],\"name\":\"__callback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTemp\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"priceOfUrl\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"requestTemp\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"temp\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"github@ToFat4Fun\",\"details\":\"Template from web3examples github: https://github.com/web3examples/ethereum/blob/master/oracle_examples/provable_temperature.sol\",\"kind\":\"dev\",\"methods\":{\"__callback(bytes32,string)\":{\"details\":\"awaits the Oracle's response\"},\"getTemp()\":{\"details\":\"return the random number as requested per oracle in bytes\",\"returns\":{\"_0\":\"oracle result in bytes\"}},\"initialize()\":{\"details\":\"substitutes the constructor\"},\"requestTemp()\":{\"details\":\"sends a request to the provable oracle service\"}},\"stateVariables\":{\"temp\":{\"details\":\"temp used for storing the return value of our call to the OraclepriceOfUrl price of the query in ETH\"}},\"title\":\"Ormr, Man vs. Dragon\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Oracle we're calling to get a random number back for the sake of randomness\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/OrmrOracle.sol\":\"OrmrOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/Initializable.sol\":{\"keccak256\":\"0x408df630dac244b5929815dcff1da4a20ab1a05c25229f44f0f398332125e753\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bebadf84cf5f7531c840cbf950a7c5c997955afea2562847117aa010f28318c2\",\"dweb:/ipfs/QmZ95DaGsq1fxqvn5NLUkQyryDE4s3zgEzRhEg7r8waRRg\"]},\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/OrmrOracle.sol\":{\"keccak256\":\"0x0e3ae5e7d536c2a672e87d316a6591779b1a59a44612d822316b381fd4421617\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dea5598d5ec7a5beb03d053b54f205dc68dbc1ff3530a20707a70fc4eacbde43\",\"dweb:/ipfs/QmabPVPgBVrsKfk1uBAKNEQ4cow4GNo1yVNeqnjpAbx82v\"]},\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/provableAPI.sol\":{\"keccak256\":\"0x9e9a8aced44aba2150e9f12625ff4862e72cfe9716417516f0eb557657f1d72e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f16d684c3c2fe101957b0f9967f1f2d0a7be4b876a251c165a788371b6287c21\",\"dweb:/ipfs/QmXTWT3mmREk2NLXYjucbdcwEgG2tQwkajzp4NtrDrCEwv\"]}},\"version\":1}",
@@ -7416,36 +7411,36 @@
     "absolutePath": "/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/OrmrOracle.sol",
     "exportedSymbols": {
       "Buffer": [
-        1366
+        1375
       ],
       "CBOR": [
-        1686
+        1695
       ],
       "Initializable": [
         488
       ],
       "OracleAddrResolverI": [
-        1125
+        1134
       ],
       "OrmrOracle": [
-        949
+        958
       ],
       "ProvableI": [
-        1119
+        1128
       ],
       "solcChecker": [
-        1006
+        1015
       ],
       "usingProvable": [
-        7435
+        7444
       ]
     },
-    "id": 950,
+    "id": 959,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 867,
+        "id": 876,
         "literals": [
           "solidity",
           ">=",
@@ -7458,10 +7453,10 @@
       {
         "absolutePath": "/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/provableAPI.sol",
         "file": "./provableAPI.sol",
-        "id": 868,
+        "id": 877,
         "nodeType": "ImportDirective",
-        "scope": 950,
-        "sourceUnit": 7436,
+        "scope": 959,
+        "sourceUnit": 7445,
         "src": "61:27:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -7469,9 +7464,9 @@
       {
         "absolutePath": "/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/Initializable.sol",
         "file": "./Initializable.sol",
-        "id": 869,
+        "id": 878,
         "nodeType": "ImportDirective",
-        "scope": 950,
+        "scope": 959,
         "sourceUnit": 489,
         "src": "90:29:5",
         "symbolAliases": [],
@@ -7482,46 +7477,46 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 871,
+              "id": 880,
               "name": "usingProvable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 7435,
+              "referencedDeclaration": 7444,
               "src": "437:13:5"
             },
-            "id": 872,
+            "id": 881,
             "nodeType": "InheritanceSpecifier",
             "src": "437:13:5"
           },
           {
             "baseName": {
-              "id": 873,
+              "id": 882,
               "name": "Initializable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 488,
               "src": "452:13:5"
             },
-            "id": 874,
+            "id": 883,
             "nodeType": "InheritanceSpecifier",
             "src": "452:13:5"
           }
         ],
         "contractDependencies": [
           488,
-          7435
+          7444
         ],
         "contractKind": "contract",
         "documentation": {
-          "id": 870,
+          "id": 879,
           "nodeType": "StructuredDocumentation",
           "src": "123:291:5",
           "text": "@title Ormr, Man vs. Dragon\n @author github@ToFat4Fun\n @notice Oracle we're calling to get a random number back for the sake of randomness\n @dev Template from web3examples github: https://github.com/web3examples/ethereum/blob/master/oracle_examples/provable_temperature.sol"
         },
         "fullyImplemented": true,
-        "id": 949,
+        "id": 958,
         "linearizedBaseContracts": [
-          949,
+          958,
           488,
-          7435
+          7444
         ],
         "name": "OrmrOracle",
         "nodeType": "ContractDefinition",
@@ -7529,17 +7524,17 @@
           {
             "constant": false,
             "documentation": {
-              "id": 875,
+              "id": 884,
               "nodeType": "StructuredDocumentation",
               "src": "473:124:5",
               "text": "@dev temp used for storing the return value of our call to the Oracle\n @dev priceOfUrl price of the query in ETH"
             },
             "functionSelector": "673402e5",
-            "id": 877,
+            "id": 886,
             "mutability": "mutable",
             "name": "temp",
             "nodeType": "VariableDeclaration",
-            "scope": 949,
+            "scope": 958,
             "src": "603:17:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -7548,7 +7543,7 @@
               "typeString": "bytes"
             },
             "typeName": {
-              "id": 876,
+              "id": 885,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "603:5:5",
@@ -7562,11 +7557,11 @@
           {
             "constant": false,
             "functionSelector": "43d3b1be",
-            "id": 879,
+            "id": 888,
             "mutability": "mutable",
             "name": "priceOfUrl",
             "nodeType": "VariableDeclaration",
-            "scope": 949,
+            "scope": 958,
             "src": "627:25:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -7575,7 +7570,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 878,
+              "id": 887,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "627:7:5",
@@ -7588,26 +7583,26 @@
           },
           {
             "body": {
-              "id": 885,
+              "id": 894,
               "nodeType": "Block",
               "src": "752:2:5",
               "statements": []
             },
             "documentation": {
-              "id": 880,
+              "id": 889,
               "nodeType": "StructuredDocumentation",
               "src": "661:36:5",
               "text": "@dev substitutes the constructor"
             },
             "functionSelector": "8129fc1c",
-            "id": 886,
+            "id": 895,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 883,
+                "id": 892,
                 "modifierName": {
-                  "id": 882,
+                  "id": 891,
                   "name": "initializer",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 461,
@@ -7620,18 +7615,18 @@
             "name": "initialize",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 881,
+              "id": 890,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "722:2:5"
             },
             "returnParameters": {
-              "id": 884,
+              "id": 893,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "752:0:5"
             },
-            "scope": 949,
+            "scope": 958,
             "src": "703:51:5",
             "stateMutability": "payable",
             "virtual": false,
@@ -7639,10 +7634,10 @@
           },
           {
             "baseFunctions": [
-              2065
+              2074
             ],
             "body": {
-              "id": 911,
+              "id": 920,
               "nodeType": "Block",
               "src": "903:98:5",
               "statements": [
@@ -7652,14 +7647,14 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 899,
+                    "id": 908,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "expression": {
-                        "id": 895,
+                        "id": 904,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -7670,7 +7665,7 @@
                           "typeString": "msg"
                         }
                       },
-                      "id": 896,
+                      "id": 905,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -7689,18 +7684,18 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 897,
+                        "id": 906,
                         "name": "provable_cbAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5187,
+                        "referencedDeclaration": 5196,
                         "src": "932:18:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_address_$",
                           "typeString": "function () returns (address)"
                         }
                       },
-                      "id": 898,
+                      "id": 907,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -7721,7 +7716,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 903,
+                  "id": 912,
                   "nodeType": "IfStatement",
                   "src": "914:48:5",
                   "trueBody": {
@@ -7729,7 +7724,7 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 900,
+                        "id": 909,
                         "name": "revert",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
@@ -7743,7 +7738,7 @@
                           "typeString": "function () pure"
                         }
                       },
-                      "id": 901,
+                      "id": 910,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -7758,24 +7753,24 @@
                         "typeString": "tuple()"
                       }
                     },
-                    "id": 902,
+                    "id": 911,
                     "nodeType": "ExpressionStatement",
                     "src": "954:8:5"
                   }
                 },
                 {
                   "expression": {
-                    "id": 909,
+                    "id": 918,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 904,
+                      "id": 913,
                       "name": "temp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 877,
+                      "referencedDeclaration": 886,
                       "src": "973:4:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_storage",
@@ -7787,11 +7782,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 907,
+                          "id": 916,
                           "name": "result",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 891,
+                          "referencedDeclaration": 900,
                           "src": "986:6:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -7806,7 +7801,7 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 906,
+                        "id": 915,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -7818,14 +7813,14 @@
                           "typeString": "type(bytes storage pointer)"
                         },
                         "typeName": {
-                          "id": 905,
+                          "id": 914,
                           "name": "bytes",
                           "nodeType": "ElementaryTypeName",
                           "src": "980:5:5",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 908,
+                      "id": 917,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -7846,42 +7841,42 @@
                       "typeString": "bytes storage ref"
                     }
                   },
-                  "id": 910,
+                  "id": 919,
                   "nodeType": "ExpressionStatement",
                   "src": "973:20:5"
                 }
               ]
             },
             "documentation": {
-              "id": 887,
+              "id": 896,
               "nodeType": "StructuredDocumentation",
               "src": "762:37:5",
               "text": "@dev awaits the Oracle's response"
             },
             "functionSelector": "27dc297e",
-            "id": 912,
+            "id": 921,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "__callback",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 893,
+              "id": 902,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "894:8:5"
             },
             "parameters": {
-              "id": 892,
+              "id": 901,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 889,
+                  "id": 898,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 912,
+                  "scope": 921,
                   "src": "825:7:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7890,7 +7885,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 888,
+                    "id": 897,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "825:7:5",
@@ -7903,11 +7898,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 891,
+                  "id": 900,
                   "mutability": "mutable",
                   "name": "result",
                   "nodeType": "VariableDeclaration",
-                  "scope": 912,
+                  "scope": 921,
                   "src": "859:20:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -7916,7 +7911,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 890,
+                    "id": 899,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "859:6:5",
@@ -7931,12 +7926,12 @@
               "src": "824:62:5"
             },
             "returnParameters": {
-              "id": 894,
+              "id": 903,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "903:0:5"
             },
-            "scope": 949,
+            "scope": 958,
             "src": "805:196:5",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -7944,23 +7939,23 @@
           },
           {
             "body": {
-              "id": 938,
+              "id": 947,
               "nodeType": "Block",
               "src": "1108:374:5",
               "statements": [
                 {
                   "expression": {
-                    "id": 920,
+                    "id": 929,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 916,
+                      "id": 925,
                       "name": "priceOfUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 879,
+                      "referencedDeclaration": 888,
                       "src": "1119:10:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -7973,7 +7968,7 @@
                       "arguments": [
                         {
                           "hexValue": "55524c",
-                          "id": 918,
+                          "id": 927,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -7995,21 +7990,21 @@
                             "typeString": "literal_string \"URL\""
                           }
                         ],
-                        "id": 917,
+                        "id": 926,
                         "name": "provable_getPrice",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
-                          2108,
-                          2126
+                          2117,
+                          2135
                         ],
-                        "referencedDeclaration": 2108,
+                        "referencedDeclaration": 2117,
                         "src": "1132:17:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$_t_uint256_$",
                           "typeString": "function (string memory) returns (uint256)"
                         }
                       },
-                      "id": 919,
+                      "id": 928,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -8030,7 +8025,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 921,
+                  "id": 930,
                   "nodeType": "ExpressionStatement",
                   "src": "1119:37:5"
                 },
@@ -8042,7 +8037,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 929,
+                        "id": 938,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -8051,14 +8046,14 @@
                           "expression": {
                             "arguments": [
                               {
-                                "id": 925,
+                                "id": 934,
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 4294967268,
                                 "src": "1197:4:5",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_OrmrOracle_$949",
+                                  "typeIdentifier": "t_contract$_OrmrOracle_$958",
                                   "typeString": "contract OrmrOracle"
                                 }
                               }
@@ -8066,11 +8061,11 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_OrmrOracle_$949",
+                                  "typeIdentifier": "t_contract$_OrmrOracle_$958",
                                   "typeString": "contract OrmrOracle"
                                 }
                               ],
-                              "id": 924,
+                              "id": 933,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -8082,14 +8077,14 @@
                                 "typeString": "type(address)"
                               },
                               "typeName": {
-                                "id": 923,
+                                "id": 932,
                                 "name": "address",
                                 "nodeType": "ElementaryTypeName",
                                 "src": "1189:7:5",
                                 "typeDescriptions": {}
                               }
                             },
-                            "id": 926,
+                            "id": 935,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -8104,7 +8099,7 @@
                               "typeString": "address"
                             }
                           },
-                          "id": 927,
+                          "id": 936,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -8120,11 +8115,11 @@
                         "nodeType": "BinaryOperation",
                         "operator": ">=",
                         "rightExpression": {
-                          "id": 928,
+                          "id": 937,
                           "name": "priceOfUrl",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 879,
+                          "referencedDeclaration": 888,
                           "src": "1214:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -8139,7 +8134,7 @@
                       },
                       {
                         "hexValue": "706c656173652061646420736f6d652045544820746f20636f76657220666f722074686520717565727920666565",
-                        "id": 930,
+                        "id": 939,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -8165,7 +8160,7 @@
                           "typeString": "literal_string \"please add some ETH to cover for the query fee\""
                         }
                       ],
-                      "id": 922,
+                      "id": 931,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -8179,7 +8174,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 931,
+                    "id": 940,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8194,7 +8189,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 932,
+                  "id": 941,
                   "nodeType": "ExpressionStatement",
                   "src": "1167:131:5"
                 },
@@ -8203,7 +8198,7 @@
                     "arguments": [
                       {
                         "hexValue": "55524c",
-                        "id": 934,
+                        "id": 943,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -8219,7 +8214,7 @@
                       },
                       {
                         "hexValue": "6a736f6e28687474703a2f2f776565726c6976652e6e6c2f6170692f6a736f6e2d646174612d31306d696e2e7068703f6b65793d30313436346364363235266c6f63617469653d48656c6c65766f6574736c756973292e6c697665776565725b305d2e74656d70",
-                        "id": 935,
+                        "id": 944,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -8245,75 +8240,75 @@
                           "typeString": "literal_string \"json(http://weerlive.nl/api/json-data-10min.php?key=01464cd625&locatie=Hellevoetsluis).liveweer[0].temp\""
                         }
                       ],
-                      "id": 933,
+                      "id": 942,
                       "name": "provable_query",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2166,
-                        2208,
-                        2254,
-                        2298,
-                        2341,
-                        2386,
-                        2435,
-                        2482,
-                        2529,
-                        2578,
-                        2631,
-                        2682,
-                        2720,
-                        2761,
-                        2805,
-                        2846,
-                        2892,
-                        2941,
-                        2993,
-                        3042,
-                        3096,
-                        3153,
-                        3213,
-                        3270,
-                        3332,
-                        3397,
-                        3465,
-                        3530,
-                        3600,
-                        3673,
-                        3749,
-                        3822,
-                        3869,
-                        3918,
-                        3971,
-                        4022,
-                        4060,
-                        4101,
-                        4145,
-                        4186,
-                        4232,
-                        4281,
-                        4333,
-                        4382,
-                        4436,
-                        4493,
-                        4553,
-                        4610,
-                        4672,
-                        4737,
-                        4805,
-                        4870,
-                        4940,
-                        5013,
-                        5089,
-                        5162
+                        2175,
+                        2217,
+                        2263,
+                        2307,
+                        2350,
+                        2395,
+                        2444,
+                        2491,
+                        2538,
+                        2587,
+                        2640,
+                        2691,
+                        2729,
+                        2770,
+                        2814,
+                        2855,
+                        2901,
+                        2950,
+                        3002,
+                        3051,
+                        3105,
+                        3162,
+                        3222,
+                        3279,
+                        3341,
+                        3406,
+                        3474,
+                        3539,
+                        3609,
+                        3682,
+                        3758,
+                        3831,
+                        3878,
+                        3927,
+                        3980,
+                        4031,
+                        4069,
+                        4110,
+                        4154,
+                        4195,
+                        4241,
+                        4290,
+                        4342,
+                        4391,
+                        4445,
+                        4502,
+                        4562,
+                        4619,
+                        4681,
+                        4746,
+                        4814,
+                        4879,
+                        4949,
+                        5022,
+                        5098,
+                        5171
                       ],
-                      "referencedDeclaration": 2166,
+                      "referencedDeclaration": 2175,
                       "src": "1309:14:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$_t_bytes32_$",
                         "typeString": "function (string memory,string memory) returns (bytes32)"
                       }
                     },
-                    "id": 936,
+                    "id": 945,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8328,38 +8323,38 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 937,
+                  "id": 946,
                   "nodeType": "ExpressionStatement",
                   "src": "1309:165:5"
                 }
               ]
             },
             "documentation": {
-              "id": 913,
+              "id": 922,
               "nodeType": "StructuredDocumentation",
               "src": "1009:55:5",
               "text": "@dev sends a request to the provable oracle service"
             },
             "functionSelector": "13fdba3c",
-            "id": 939,
+            "id": 948,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "requestTemp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 914,
+              "id": 923,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1090:2:5"
             },
             "returnParameters": {
-              "id": 915,
+              "id": 924,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1108:0:5"
             },
-            "scope": 949,
+            "scope": 958,
             "src": "1070:412:5",
             "stateMutability": "payable",
             "virtual": false,
@@ -8367,60 +8362,60 @@
           },
           {
             "body": {
-              "id": 947,
+              "id": 956,
               "nodeType": "Block",
               "src": "1929:30:5",
               "statements": [
                 {
                   "expression": {
-                    "id": 945,
+                    "id": 954,
                     "name": "temp",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 877,
+                    "referencedDeclaration": 886,
                     "src": "1947:4:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage",
                       "typeString": "bytes storage ref"
                     }
                   },
-                  "functionReturnParameters": 944,
-                  "id": 946,
+                  "functionReturnParameters": 953,
+                  "id": 955,
                   "nodeType": "Return",
                   "src": "1940:11:5"
                 }
               ]
             },
             "documentation": {
-              "id": 940,
+              "id": 949,
               "nodeType": "StructuredDocumentation",
               "src": "1763:106:5",
               "text": "@dev return the random number as requested per oracle in bytes\n @return oracle result in bytes"
             },
             "functionSelector": "95252560",
-            "id": 948,
+            "id": 957,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getTemp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 941,
+              "id": 950,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1891:2:5"
             },
             "returnParameters": {
-              "id": 944,
+              "id": 953,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 943,
+                  "id": 952,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 948,
+                  "scope": 957,
                   "src": "1915:12:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -8429,7 +8424,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 942,
+                    "id": 951,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1915:5:5",
@@ -8443,14 +8438,14 @@
               ],
               "src": "1914:14:5"
             },
-            "scope": 949,
+            "scope": 958,
             "src": "1875:84:5",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 950,
+        "scope": 959,
         "src": "414:1548:5"
       }
     ],
@@ -8460,36 +8455,36 @@
     "absolutePath": "/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/OrmrOracle.sol",
     "exportedSymbols": {
       "Buffer": [
-        1366
+        1375
       ],
       "CBOR": [
-        1686
+        1695
       ],
       "Initializable": [
         488
       ],
       "OracleAddrResolverI": [
-        1125
+        1134
       ],
       "OrmrOracle": [
-        949
+        958
       ],
       "ProvableI": [
-        1119
+        1128
       ],
       "solcChecker": [
-        1006
+        1015
       ],
       "usingProvable": [
-        7435
+        7444
       ]
     },
-    "id": 950,
+    "id": 959,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 867,
+        "id": 876,
         "literals": [
           "solidity",
           ">=",
@@ -8502,10 +8497,10 @@
       {
         "absolutePath": "/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/provableAPI.sol",
         "file": "./provableAPI.sol",
-        "id": 868,
+        "id": 877,
         "nodeType": "ImportDirective",
-        "scope": 950,
-        "sourceUnit": 7436,
+        "scope": 959,
+        "sourceUnit": 7445,
         "src": "61:27:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -8513,9 +8508,9 @@
       {
         "absolutePath": "/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/Initializable.sol",
         "file": "./Initializable.sol",
-        "id": 869,
+        "id": 878,
         "nodeType": "ImportDirective",
-        "scope": 950,
+        "scope": 959,
         "sourceUnit": 489,
         "src": "90:29:5",
         "symbolAliases": [],
@@ -8526,46 +8521,46 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 871,
+              "id": 880,
               "name": "usingProvable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 7435,
+              "referencedDeclaration": 7444,
               "src": "437:13:5"
             },
-            "id": 872,
+            "id": 881,
             "nodeType": "InheritanceSpecifier",
             "src": "437:13:5"
           },
           {
             "baseName": {
-              "id": 873,
+              "id": 882,
               "name": "Initializable",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 488,
               "src": "452:13:5"
             },
-            "id": 874,
+            "id": 883,
             "nodeType": "InheritanceSpecifier",
             "src": "452:13:5"
           }
         ],
         "contractDependencies": [
           488,
-          7435
+          7444
         ],
         "contractKind": "contract",
         "documentation": {
-          "id": 870,
+          "id": 879,
           "nodeType": "StructuredDocumentation",
           "src": "123:291:5",
           "text": "@title Ormr, Man vs. Dragon\n @author github@ToFat4Fun\n @notice Oracle we're calling to get a random number back for the sake of randomness\n @dev Template from web3examples github: https://github.com/web3examples/ethereum/blob/master/oracle_examples/provable_temperature.sol"
         },
         "fullyImplemented": true,
-        "id": 949,
+        "id": 958,
         "linearizedBaseContracts": [
-          949,
+          958,
           488,
-          7435
+          7444
         ],
         "name": "OrmrOracle",
         "nodeType": "ContractDefinition",
@@ -8573,17 +8568,17 @@
           {
             "constant": false,
             "documentation": {
-              "id": 875,
+              "id": 884,
               "nodeType": "StructuredDocumentation",
               "src": "473:124:5",
               "text": "@dev temp used for storing the return value of our call to the Oracle\n @dev priceOfUrl price of the query in ETH"
             },
             "functionSelector": "673402e5",
-            "id": 877,
+            "id": 886,
             "mutability": "mutable",
             "name": "temp",
             "nodeType": "VariableDeclaration",
-            "scope": 949,
+            "scope": 958,
             "src": "603:17:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -8592,7 +8587,7 @@
               "typeString": "bytes"
             },
             "typeName": {
-              "id": 876,
+              "id": 885,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "603:5:5",
@@ -8606,11 +8601,11 @@
           {
             "constant": false,
             "functionSelector": "43d3b1be",
-            "id": 879,
+            "id": 888,
             "mutability": "mutable",
             "name": "priceOfUrl",
             "nodeType": "VariableDeclaration",
-            "scope": 949,
+            "scope": 958,
             "src": "627:25:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -8619,7 +8614,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 878,
+              "id": 887,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "627:7:5",
@@ -8632,26 +8627,26 @@
           },
           {
             "body": {
-              "id": 885,
+              "id": 894,
               "nodeType": "Block",
               "src": "752:2:5",
               "statements": []
             },
             "documentation": {
-              "id": 880,
+              "id": 889,
               "nodeType": "StructuredDocumentation",
               "src": "661:36:5",
               "text": "@dev substitutes the constructor"
             },
             "functionSelector": "8129fc1c",
-            "id": 886,
+            "id": 895,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 883,
+                "id": 892,
                 "modifierName": {
-                  "id": 882,
+                  "id": 891,
                   "name": "initializer",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 461,
@@ -8664,18 +8659,18 @@
             "name": "initialize",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 881,
+              "id": 890,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "722:2:5"
             },
             "returnParameters": {
-              "id": 884,
+              "id": 893,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "752:0:5"
             },
-            "scope": 949,
+            "scope": 958,
             "src": "703:51:5",
             "stateMutability": "payable",
             "virtual": false,
@@ -8683,10 +8678,10 @@
           },
           {
             "baseFunctions": [
-              2065
+              2074
             ],
             "body": {
-              "id": 911,
+              "id": 920,
               "nodeType": "Block",
               "src": "903:98:5",
               "statements": [
@@ -8696,14 +8691,14 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 899,
+                    "id": 908,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "expression": {
-                        "id": 895,
+                        "id": 904,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
@@ -8714,7 +8709,7 @@
                           "typeString": "msg"
                         }
                       },
-                      "id": 896,
+                      "id": 905,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -8733,18 +8728,18 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 897,
+                        "id": 906,
                         "name": "provable_cbAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 5187,
+                        "referencedDeclaration": 5196,
                         "src": "932:18:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_address_$",
                           "typeString": "function () returns (address)"
                         }
                       },
-                      "id": 898,
+                      "id": 907,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -8765,7 +8760,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 903,
+                  "id": 912,
                   "nodeType": "IfStatement",
                   "src": "914:48:5",
                   "trueBody": {
@@ -8773,7 +8768,7 @@
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 900,
+                        "id": 909,
                         "name": "revert",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
@@ -8787,7 +8782,7 @@
                           "typeString": "function () pure"
                         }
                       },
-                      "id": 901,
+                      "id": 910,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -8802,24 +8797,24 @@
                         "typeString": "tuple()"
                       }
                     },
-                    "id": 902,
+                    "id": 911,
                     "nodeType": "ExpressionStatement",
                     "src": "954:8:5"
                   }
                 },
                 {
                   "expression": {
-                    "id": 909,
+                    "id": 918,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 904,
+                      "id": 913,
                       "name": "temp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 877,
+                      "referencedDeclaration": 886,
                       "src": "973:4:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes_storage",
@@ -8831,11 +8826,11 @@
                     "rightHandSide": {
                       "arguments": [
                         {
-                          "id": 907,
+                          "id": 916,
                           "name": "result",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 891,
+                          "referencedDeclaration": 900,
                           "src": "986:6:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -8850,7 +8845,7 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 906,
+                        "id": 915,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -8862,14 +8857,14 @@
                           "typeString": "type(bytes storage pointer)"
                         },
                         "typeName": {
-                          "id": 905,
+                          "id": 914,
                           "name": "bytes",
                           "nodeType": "ElementaryTypeName",
                           "src": "980:5:5",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 908,
+                      "id": 917,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -8890,42 +8885,42 @@
                       "typeString": "bytes storage ref"
                     }
                   },
-                  "id": 910,
+                  "id": 919,
                   "nodeType": "ExpressionStatement",
                   "src": "973:20:5"
                 }
               ]
             },
             "documentation": {
-              "id": 887,
+              "id": 896,
               "nodeType": "StructuredDocumentation",
               "src": "762:37:5",
               "text": "@dev awaits the Oracle's response"
             },
             "functionSelector": "27dc297e",
-            "id": 912,
+            "id": 921,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "__callback",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 893,
+              "id": 902,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "894:8:5"
             },
             "parameters": {
-              "id": 892,
+              "id": 901,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 889,
+                  "id": 898,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 912,
+                  "scope": 921,
                   "src": "825:7:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -8934,7 +8929,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 888,
+                    "id": 897,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "825:7:5",
@@ -8947,11 +8942,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 891,
+                  "id": 900,
                   "mutability": "mutable",
                   "name": "result",
                   "nodeType": "VariableDeclaration",
-                  "scope": 912,
+                  "scope": 921,
                   "src": "859:20:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -8960,7 +8955,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 890,
+                    "id": 899,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "859:6:5",
@@ -8975,12 +8970,12 @@
               "src": "824:62:5"
             },
             "returnParameters": {
-              "id": 894,
+              "id": 903,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "903:0:5"
             },
-            "scope": 949,
+            "scope": 958,
             "src": "805:196:5",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -8988,23 +8983,23 @@
           },
           {
             "body": {
-              "id": 938,
+              "id": 947,
               "nodeType": "Block",
               "src": "1108:374:5",
               "statements": [
                 {
                   "expression": {
-                    "id": 920,
+                    "id": 929,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 916,
+                      "id": 925,
                       "name": "priceOfUrl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 879,
+                      "referencedDeclaration": 888,
                       "src": "1119:10:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -9017,7 +9012,7 @@
                       "arguments": [
                         {
                           "hexValue": "55524c",
-                          "id": 918,
+                          "id": 927,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -9039,21 +9034,21 @@
                             "typeString": "literal_string \"URL\""
                           }
                         ],
-                        "id": 917,
+                        "id": 926,
                         "name": "provable_getPrice",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
-                          2108,
-                          2126
+                          2117,
+                          2135
                         ],
-                        "referencedDeclaration": 2108,
+                        "referencedDeclaration": 2117,
                         "src": "1132:17:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$_t_uint256_$",
                           "typeString": "function (string memory) returns (uint256)"
                         }
                       },
-                      "id": 919,
+                      "id": 928,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -9074,7 +9069,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 921,
+                  "id": 930,
                   "nodeType": "ExpressionStatement",
                   "src": "1119:37:5"
                 },
@@ -9086,7 +9081,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 929,
+                        "id": 938,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -9095,14 +9090,14 @@
                           "expression": {
                             "arguments": [
                               {
-                                "id": 925,
+                                "id": 934,
                                 "name": "this",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 4294967268,
                                 "src": "1197:4:5",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_OrmrOracle_$949",
+                                  "typeIdentifier": "t_contract$_OrmrOracle_$958",
                                   "typeString": "contract OrmrOracle"
                                 }
                               }
@@ -9110,11 +9105,11 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_OrmrOracle_$949",
+                                  "typeIdentifier": "t_contract$_OrmrOracle_$958",
                                   "typeString": "contract OrmrOracle"
                                 }
                               ],
-                              "id": 924,
+                              "id": 933,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -9126,14 +9121,14 @@
                                 "typeString": "type(address)"
                               },
                               "typeName": {
-                                "id": 923,
+                                "id": 932,
                                 "name": "address",
                                 "nodeType": "ElementaryTypeName",
                                 "src": "1189:7:5",
                                 "typeDescriptions": {}
                               }
                             },
-                            "id": 926,
+                            "id": 935,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -9148,7 +9143,7 @@
                               "typeString": "address"
                             }
                           },
-                          "id": 927,
+                          "id": 936,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -9164,11 +9159,11 @@
                         "nodeType": "BinaryOperation",
                         "operator": ">=",
                         "rightExpression": {
-                          "id": 928,
+                          "id": 937,
                           "name": "priceOfUrl",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 879,
+                          "referencedDeclaration": 888,
                           "src": "1214:10:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -9183,7 +9178,7 @@
                       },
                       {
                         "hexValue": "706c656173652061646420736f6d652045544820746f20636f76657220666f722074686520717565727920666565",
-                        "id": 930,
+                        "id": 939,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -9209,7 +9204,7 @@
                           "typeString": "literal_string \"please add some ETH to cover for the query fee\""
                         }
                       ],
-                      "id": 922,
+                      "id": 931,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -9223,7 +9218,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 931,
+                    "id": 940,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9238,7 +9233,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 932,
+                  "id": 941,
                   "nodeType": "ExpressionStatement",
                   "src": "1167:131:5"
                 },
@@ -9247,7 +9242,7 @@
                     "arguments": [
                       {
                         "hexValue": "55524c",
-                        "id": 934,
+                        "id": 943,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -9263,7 +9258,7 @@
                       },
                       {
                         "hexValue": "6a736f6e28687474703a2f2f776565726c6976652e6e6c2f6170692f6a736f6e2d646174612d31306d696e2e7068703f6b65793d30313436346364363235266c6f63617469653d48656c6c65766f6574736c756973292e6c697665776565725b305d2e74656d70",
-                        "id": 935,
+                        "id": 944,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -9289,75 +9284,75 @@
                           "typeString": "literal_string \"json(http://weerlive.nl/api/json-data-10min.php?key=01464cd625&locatie=Hellevoetsluis).liveweer[0].temp\""
                         }
                       ],
-                      "id": 933,
+                      "id": 942,
                       "name": "provable_query",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2166,
-                        2208,
-                        2254,
-                        2298,
-                        2341,
-                        2386,
-                        2435,
-                        2482,
-                        2529,
-                        2578,
-                        2631,
-                        2682,
-                        2720,
-                        2761,
-                        2805,
-                        2846,
-                        2892,
-                        2941,
-                        2993,
-                        3042,
-                        3096,
-                        3153,
-                        3213,
-                        3270,
-                        3332,
-                        3397,
-                        3465,
-                        3530,
-                        3600,
-                        3673,
-                        3749,
-                        3822,
-                        3869,
-                        3918,
-                        3971,
-                        4022,
-                        4060,
-                        4101,
-                        4145,
-                        4186,
-                        4232,
-                        4281,
-                        4333,
-                        4382,
-                        4436,
-                        4493,
-                        4553,
-                        4610,
-                        4672,
-                        4737,
-                        4805,
-                        4870,
-                        4940,
-                        5013,
-                        5089,
-                        5162
+                        2175,
+                        2217,
+                        2263,
+                        2307,
+                        2350,
+                        2395,
+                        2444,
+                        2491,
+                        2538,
+                        2587,
+                        2640,
+                        2691,
+                        2729,
+                        2770,
+                        2814,
+                        2855,
+                        2901,
+                        2950,
+                        3002,
+                        3051,
+                        3105,
+                        3162,
+                        3222,
+                        3279,
+                        3341,
+                        3406,
+                        3474,
+                        3539,
+                        3609,
+                        3682,
+                        3758,
+                        3831,
+                        3878,
+                        3927,
+                        3980,
+                        4031,
+                        4069,
+                        4110,
+                        4154,
+                        4195,
+                        4241,
+                        4290,
+                        4342,
+                        4391,
+                        4445,
+                        4502,
+                        4562,
+                        4619,
+                        4681,
+                        4746,
+                        4814,
+                        4879,
+                        4949,
+                        5022,
+                        5098,
+                        5171
                       ],
-                      "referencedDeclaration": 2166,
+                      "referencedDeclaration": 2175,
                       "src": "1309:14:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$_t_bytes32_$",
                         "typeString": "function (string memory,string memory) returns (bytes32)"
                       }
                     },
-                    "id": 936,
+                    "id": 945,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9372,38 +9367,38 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 937,
+                  "id": 946,
                   "nodeType": "ExpressionStatement",
                   "src": "1309:165:5"
                 }
               ]
             },
             "documentation": {
-              "id": 913,
+              "id": 922,
               "nodeType": "StructuredDocumentation",
               "src": "1009:55:5",
               "text": "@dev sends a request to the provable oracle service"
             },
             "functionSelector": "13fdba3c",
-            "id": 939,
+            "id": 948,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "requestTemp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 914,
+              "id": 923,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1090:2:5"
             },
             "returnParameters": {
-              "id": 915,
+              "id": 924,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1108:0:5"
             },
-            "scope": 949,
+            "scope": 958,
             "src": "1070:412:5",
             "stateMutability": "payable",
             "virtual": false,
@@ -9411,60 +9406,60 @@
           },
           {
             "body": {
-              "id": 947,
+              "id": 956,
               "nodeType": "Block",
               "src": "1929:30:5",
               "statements": [
                 {
                   "expression": {
-                    "id": 945,
+                    "id": 954,
                     "name": "temp",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 877,
+                    "referencedDeclaration": 886,
                     "src": "1947:4:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage",
                       "typeString": "bytes storage ref"
                     }
                   },
-                  "functionReturnParameters": 944,
-                  "id": 946,
+                  "functionReturnParameters": 953,
+                  "id": 955,
                   "nodeType": "Return",
                   "src": "1940:11:5"
                 }
               ]
             },
             "documentation": {
-              "id": 940,
+              "id": 949,
               "nodeType": "StructuredDocumentation",
               "src": "1763:106:5",
               "text": "@dev return the random number as requested per oracle in bytes\n @return oracle result in bytes"
             },
             "functionSelector": "95252560",
-            "id": 948,
+            "id": 957,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getTemp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 941,
+              "id": 950,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1891:2:5"
             },
             "returnParameters": {
-              "id": 944,
+              "id": 953,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 943,
+                  "id": 952,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 948,
+                  "scope": 957,
                   "src": "1915:12:5",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -9473,7 +9468,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 942,
+                    "id": 951,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1915:5:5",
@@ -9487,14 +9482,14 @@
               ],
               "src": "1914:14:5"
             },
-            "scope": 949,
+            "scope": 958,
             "src": "1875:84:5",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 950,
+        "scope": 959,
         "src": "414:1548:5"
       }
     ],
@@ -9508,19 +9503,18 @@
     "4": {
       "events": {},
       "links": {},
-      "address": "0xbA57bEF885922763a29D4a78037b922080659Fd5",
+      "address": "0x71b054f43b61CBe684Cab10AaF01157A70a1e3B8",
       "transactionHash": "0x1a85dd0cbb98dd1acdd19c65cb614169062691b54eb851ba4257baefd95a7e7e"
     },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xA3358108E0be8E6E75DF1464A57c869567991183",
+      "address": "0x166c9a35C10C8bBD6DF571D31A5553A766bBe7fB",
       "transactionHash": "0x82a34bc8a9eba6465f60a9c08ae322ab27f61e6da798097cceb9d5fc4d4f2440"
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-25T18:03:26.625Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-12-25T21:35:00.783Z",
   "devdoc": {
     "author": "github@ToFat4Fun",
     "details": "Template from web3examples github: https://github.com/web3examples/ethereum/blob/master/oracle_examples/provable_temperature.sol",

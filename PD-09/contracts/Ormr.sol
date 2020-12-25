@@ -14,6 +14,8 @@ import './Initializable.sol';
 contract Ormr is Initializable {
     /// @dev emits the result of the battle initiated by the user. shows in front-end
     event encounterResult(string);
+    /// @dev return for the ownerSays method
+    event ownerSaysResponse(string);
 
     /// @dev HF herofactory we use to create heroes     
     /// @dev DF dragonfactory we use to create dragons
@@ -52,9 +54,8 @@ contract Ormr is Initializable {
     }
 
     /// @dev function to demonstrate the modifier for PD-9
-    /// @return messageFromOwner our owner left a message reminding himself he's the boss
-    function ownerSays() public view onlyOwner returns (string memory messageFromOwner) {
-        return "I am the owner of this contract! And no one else!";
+    function ownerSays() public onlyOwner {
+        emit ownerSaysResponse("I am the owner of this contract! And no one else!");
     }
 
     /// @dev PD-9 selfdestruct method. More info: https://docs.soliditylang.org/en/v0.8.0/contracts.html#modifiers 

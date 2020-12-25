@@ -59,8 +59,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -95,8 +94,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -7712,7 +7710,7 @@
         413
       ],
       "SimpleFactory": [
-        998
+        1007
       ]
     },
     "id": 414,
@@ -7745,7 +7743,7 @@
         "id": 191,
         "nodeType": "ImportDirective",
         "scope": 414,
-        "sourceUnit": 999,
+        "sourceUnit": 1008,
         "src": "82:29:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -7873,7 +7871,7 @@
               "id": 202,
               "name": "SimpleFactory",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 998,
+              "referencedDeclaration": 1007,
               "src": "599:13:1"
             },
             "id": 203,
@@ -7882,7 +7880,7 @@
           }
         ],
         "contractDependencies": [
-          998
+          1007
         ],
         "contractKind": "contract",
         "documentation": {
@@ -7895,7 +7893,7 @@
         "id": 413,
         "linearizedBaseContracts": [
           413,
-          998
+          1007
         ],
         "name": "HeroFactory",
         "nodeType": "ContractDefinition",
@@ -9869,7 +9867,7 @@
           },
           {
             "baseFunctions": [
-              975
+              984
             ],
             "body": {
               "id": 386,
@@ -10195,7 +10193,7 @@
           },
           {
             "baseFunctions": [
-              997
+              1006
             ],
             "body": {
               "id": 411,
@@ -10536,7 +10534,7 @@
         413
       ],
       "SimpleFactory": [
-        998
+        1007
       ]
     },
     "id": 414,
@@ -10569,7 +10567,7 @@
         "id": 191,
         "nodeType": "ImportDirective",
         "scope": 414,
-        "sourceUnit": 999,
+        "sourceUnit": 1008,
         "src": "82:29:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10697,7 +10695,7 @@
               "id": 202,
               "name": "SimpleFactory",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 998,
+              "referencedDeclaration": 1007,
               "src": "599:13:1"
             },
             "id": 203,
@@ -10706,7 +10704,7 @@
           }
         ],
         "contractDependencies": [
-          998
+          1007
         ],
         "contractKind": "contract",
         "documentation": {
@@ -10719,7 +10717,7 @@
         "id": 413,
         "linearizedBaseContracts": [
           413,
-          998
+          1007
         ],
         "name": "HeroFactory",
         "nodeType": "ContractDefinition",
@@ -12693,7 +12691,7 @@
           },
           {
             "baseFunctions": [
-              975
+              984
             ],
             "body": {
               "id": 386,
@@ -13019,7 +13017,7 @@
           },
           {
             "baseFunctions": [
-              997
+              1006
             ],
             "body": {
               "id": 411,
@@ -13378,7 +13376,7 @@
         }
       },
       "links": {},
-      "address": "0x2C984c88a651858C12F4a33229bead38E6825b90",
+      "address": "0x1D59d48d8cDFf7a383c1C7B61dDc069127b5E96f",
       "transactionHash": "0x58c073337b330ed205a5bb280c4d587a6b77321b21b8047edee4fc07cd3d4421"
     },
     "5777": {
@@ -13404,13 +13402,12 @@
         }
       },
       "links": {},
-      "address": "0xFDc2018D01062a30960619760A1Dbf9716B67299",
+      "address": "0xdc4E8A882040187cCCBD10cDD9fd255f2a24a7f1",
       "transactionHash": "0xdbc16c6dc5d016053a5c809116770d893e396df2c5928c5a260f954e7439571b"
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-25T18:03:26.610Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-12-25T21:35:00.760Z",
   "devdoc": {
     "author": "github@ToFat4Fun",
     "details": "Working with solidity v0.8.0, creates heroes",
