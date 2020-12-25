@@ -3,7 +3,6 @@ pragma solidity >=0.8.0;
 pragma abicoder v2;
 
 import './SimpleFactory.sol';
-import './Initializable.sol';
 
 /// @dev struct defined here to allow code re-usage: https://docs.soliditylang.org/en/v0.8.0/types.html#structs 
 /// this model will be used as dragon throughout the app
@@ -19,7 +18,7 @@ struct Dragon {
 /// @author github@ToFat4Fun
 /// @notice Responsible for creating dragons
 /// @dev Working with solidity v0.8.0, creates dragons
-contract DragonFactory is SimpleFactory, Initializable {
+contract DragonFactory is SimpleFactory {
 
     /// @dev emits a newly created dragon
     event newDragon(Dragon);
@@ -28,17 +27,12 @@ contract DragonFactory is SimpleFactory, Initializable {
     mapping(address => uint256) dragonLookup;
 
     /// @dev determine the maximum length of power and health
-    uint256 dragonPowerModulus;
-    uint256 dragonHealthModulus;
+    uint256 constant dragonPowerModulus = 10**5;
+    uint256 constant dragonHealthModulus = 10**7;
     Dragon dragon;
 
     /// @dev keep a list of all existing heroes in the contract.
     Dragon[] dragons;
-
-    function initialize() public initializer { 
-        dragonPowerModulus = 10**5;
-        dragonHealthModulus = 10**7;
-    }
     
     /// @dev get method that returns one dragon
     function getDragon() public view returns (Dragon memory) {

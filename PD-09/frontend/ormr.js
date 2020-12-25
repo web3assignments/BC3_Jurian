@@ -2,9 +2,9 @@
 // Contract Address: https://rinkeby.etherscan.io/address/0x648a8087721bb3f68d2e9217a55850bfacece905
 //const contract_address = '0x648a8087721bb3f68d2e9217a55850bfacece905';
 
-// PD-8 Address with Oracle: https://rinkeby.etherscan.io/address/0x736e5A4ec1cFB2FBA2d6A02d768df9844fd24e2A
-// Ormr deployed at: 0x736e5A4ec1cFB2FBA2d6A02d768df9844fd24e2A <- our main contract using the oracle
-const contract_address = '0x736e5A4ec1cFB2FBA2d6A02d768df9844fd24e2A';
+// For PD-8 and higher
+// Ormr deployed at: https://rinkeby.etherscan.io/address/0x7dd14c8dAcF9e734B2EE21916bFBe86526969E3B 
+const contract_address = '0x7dd14c8dAcF9e734B2EE21916bFBe86526969E3B';
 
 // Compile your contract in remix, then go to the .JSON artifact and ABI will be there. OR truffle build/contracts folder.
 
@@ -185,10 +185,24 @@ const abi = [
     },
     {
       "inputs": [],
-      "name": "owner",
+      "name": "DF",
       "outputs": [
         {
-          "internalType": "address",
+          "internalType": "contract DragonFactory",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "HF",
+      "outputs": [
+        {
+          "internalType": "contract HeroFactory",
           "name": "",
           "type": "address"
         }
@@ -203,6 +217,20 @@ const abi = [
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -436,9 +464,9 @@ window.addEventListener('load', asyncloaded);
 // Contract functions:
 // Create our hero! Maximum one per address.
 function createHero() {
-    var heroName = document.getElementById('heroName').value;
-    contract.methods.createHero(heroName).send({from: accounts[0]}).then(x => console.log(x));
-    document.getElementById('heroName').value = '';
+  var heroName = document.getElementById('heroName').value;
+  contract.methods.createHero(heroName).send({from: accounts[0]}).then(x => console.log(x));
+  document.getElementById('heroName').value = '';
 }
 
 // Get our hero.
@@ -500,18 +528,22 @@ async function getTemp() {
   document.getElementById('tempRaw').innerText = result;
   var resUint = await contract.methods.getTempUint().call().then(x => {console.log(x); return x}); // convert result
   document.getElementById('OracleRandom').innerText = resUint
-
 } 
 
 // PD-9 modifier OwnerSays function; only contract owner should be able to call this
 async function ownerSays() {
   var result = await contract.methods.ownerSays().call().then(x => {console.log(x); return x});
-  document.getElementById('ownerSays').innerText = result; //result.value?
+  document.getElementById('ownerSays').innerText = result;
+}
+
+async function getOwner() {
+  var result = await contract.methods.getOwner().call().then(x => {console.log('owner: ' + x); return x});
+  document.getElementById('getOwner').innerText = 'Owner: ' + result;
 }
 
 // PD-9 selfdestruct calls for the destruction of the contract! only the owner should be able to request this
 async function selfdestruct() {
   console.log(`initiating self-destruct for ${contract_address}, stand by`);
   var result = await contract.methods.destroy().send({from: accounts[0]}).then(x => {console.log(x); return x});
-  document.getElementById('selfdestruct').innerText = result; //result.value?
+  document.getElementById('selfdestruct').innerText = result.value;
 }

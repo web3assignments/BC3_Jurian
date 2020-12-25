@@ -1,198 +1,77 @@
 {
   "manifestVersion": "3.1",
   "impls": {
-    "0df8f0c8561e4594c9fb53bcf7b8f98903486239d93fb5463fb4820179e99126": {
-      "address": "0xA7b4086F11F8D4d80a05ad07C796ee6Af7B7a6C7",
-      "txHash": "0x3782aca0c7dea347c3c014192b0af14f034524a32329138b985d5e5bf4e539aa",
+    "e04bf990536674598b37d213fb64bf59a7afe0533beb2447c3557263d3364388": {
+      "address": "0x6d12Ca3d58D927aa6813576808Dff6fB4B7209f3",
+      "txHash": "0x0adbd032a82297e844a13d5aeb1ee0d3082e60e59dac2bb5ffb7c5b03266b78a",
       "layout": {
         "storage": [
-          {
-            "contract": "Initializable",
-            "label": "initialized",
-            "type": "t_bool",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:23"
-          },
-          {
-            "contract": "Initializable",
-            "label": "initializing",
-            "type": "t_bool",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:28"
-          },
-          {
-            "contract": "Initializable",
-            "label": "______gap",
-            "type": "t_array(t_uint256)50_storage",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:63"
-          },
-          {
-            "contract": "Migrations",
-            "label": "owner",
-            "type": "t_address",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Migrations.sol:6"
-          },
-          {
-            "contract": "Migrations",
-            "label": "last_completed_migration",
-            "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Migrations.sol:7"
-          }
-        ],
-        "types": {
-          "t_address": {
-            "label": "address"
-          },
-          "t_uint256": {
-            "label": "uint256"
-          },
-          "t_bool": {
-            "label": "bool"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]"
-          }
-        }
-      }
-    },
-    "73b0fbbbe4ebc8b5bcb979227d35d4ef5383f2a6b1dde7870bb402a0f8f45f05": {
-      "address": "0x886fD5f0b3526Ac784775AeDb81811D9b8c6CFC8",
-      "txHash": "0xa516064aef09eed9f2d01729c801b179b775a8002e85f865d3305457ce329576",
-      "layout": {
-        "storage": [
-          {
-            "contract": "Initializable",
-            "label": "initialized",
-            "type": "t_bool",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:22"
-          },
-          {
-            "contract": "Initializable",
-            "label": "initializing",
-            "type": "t_bool",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:27"
-          },
-          {
-            "contract": "Initializable",
-            "label": "______gap",
-            "type": "t_array(t_uint256)50_storage",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:62"
-          },
           {
             "contract": "DragonFactory",
             "label": "dragonLookup",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\DragonFactory.sol:29"
-          },
-          {
-            "contract": "DragonFactory",
-            "label": "dragonPowerModulus",
-            "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\DragonFactory.sol:32"
-          },
-          {
-            "contract": "DragonFactory",
-            "label": "dragonHealthModulus",
-            "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\DragonFactory.sol:33"
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\DragonFactory.sol:27"
           },
           {
             "contract": "DragonFactory",
             "label": "dragon",
-            "type": "t_struct(Dragon)28_storage",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\DragonFactory.sol:34"
+            "type": "t_struct(Dragon)14_storage",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\DragonFactory.sol:32"
           },
           {
             "contract": "DragonFactory",
             "label": "dragons",
-            "type": "t_array(t_struct(Dragon)28_storage)dyn_storage",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\DragonFactory.sol:37"
+            "type": "t_array(t_struct(Dragon)14_storage)dyn_storage",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\DragonFactory.sol:35"
           }
         ],
         "types": {
           "t_mapping(t_address,t_uint256)": {
             "label": "mapping(address => uint256)"
           },
-          "t_uint256": {
-            "label": "uint256"
-          },
-          "t_struct(Dragon)28_storage": {
+          "t_struct(Dragon)14_storage": {
             "label": "struct Dragon"
           },
-          "t_array(t_struct(Dragon)28_storage)dyn_storage": {
+          "t_array(t_struct(Dragon)14_storage)dyn_storage": {
             "label": "struct Dragon[]"
-          },
-          "t_bool": {
-            "label": "bool"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]"
           }
         }
       }
     },
-    "39cbbe017e65f1b8f25442bc49ad9a090b5b4d34c41929da2ef3a3389d54dfae": {
-      "address": "0xbe2EE85AD039e541050bcE69d4dE816F91e98150",
-      "txHash": "0x789fc2531be9cfdc7558a060e4e13ded133ce2ba8b56b23a65d9d916915c2a2f",
+    "dc32a3c2171f6d4931d183a26975c402ecc93927174ff166121aba3d32e34b1c": {
+      "address": "0x76232a6E41004c26a561f5fBd15B863186693083",
+      "txHash": "0xdbc16c6dc5d016053a5c809116770d893e396df2c5928c5a260f954e7439571b",
       "layout": {
         "storage": [
-          {
-            "contract": "Initializable",
-            "label": "initialized",
-            "type": "t_bool",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:22"
-          },
-          {
-            "contract": "Initializable",
-            "label": "initializing",
-            "type": "t_bool",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:27"
-          },
-          {
-            "contract": "Initializable",
-            "label": "______gap",
-            "type": "t_array(t_uint256)50_storage",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:62"
-          },
           {
             "contract": "HeroFactory",
             "label": "heroToOwner",
             "type": "t_mapping(t_uint256,t_address)",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:30"
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:27"
           },
           {
             "contract": "HeroFactory",
             "label": "heroLookup",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:31"
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:28"
           },
           {
             "contract": "HeroFactory",
             "label": "ownerHeroCount",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:32"
-          },
-          {
-            "contract": "HeroFactory",
-            "label": "heroPowerModulus",
-            "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:35"
-          },
-          {
-            "contract": "HeroFactory",
-            "label": "heroHealthModulus",
-            "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:36"
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:29"
           },
           {
             "contract": "HeroFactory",
             "label": "hero",
-            "type": "t_struct(Hero)240_storage",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:37"
+            "type": "t_struct(Hero)200_storage",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:34"
           },
           {
             "contract": "HeroFactory",
             "label": "heroes",
-            "type": "t_array(t_struct(Hero)240_storage)dyn_storage",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:40"
+            "type": "t_array(t_struct(Hero)200_storage)dyn_storage",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\HeroFactory.sol:37"
           }
         ],
         "types": {
@@ -202,39 +81,30 @@
           "t_mapping(t_address,t_uint256)": {
             "label": "mapping(address => uint256)"
           },
-          "t_uint256": {
-            "label": "uint256"
-          },
-          "t_struct(Hero)240_storage": {
+          "t_struct(Hero)200_storage": {
             "label": "struct Hero"
           },
-          "t_array(t_struct(Hero)240_storage)dyn_storage": {
+          "t_array(t_struct(Hero)200_storage)dyn_storage": {
             "label": "struct Hero[]"
-          },
-          "t_bool": {
-            "label": "bool"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]"
           }
         }
       }
     },
     "9c7541581a51e74e19491d7277287a05d5fdb2dff1f0611f177be1a8c93cd7c4": {
-      "address": "0xBa4D4Ae6bE0C190F25432b6126a9Dff78FC640f9",
-      "txHash": "0x9281ee039417060cb9d52165eb4ea8d1a140508e3b84581c8e2ff1012b41f9fb",
+      "address": "0x80Ab1b171E210e36aa469fAE7B4E24AE87F1B880",
+      "txHash": "0x82a34bc8a9eba6465f60a9c08ae322ab27f61e6da798097cceb9d5fc4d4f2440",
       "layout": {
         "storage": [
           {
             "contract": "usingProvable",
             "label": "provable",
-            "type": "t_contract(ProvableI)1203",
+            "type": "t_contract(ProvableI)1119",
             "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\provableAPI.sol:260"
           },
           {
             "contract": "usingProvable",
             "label": "OAR",
-            "type": "t_contract(OracleAddrResolverI)1209",
+            "type": "t_contract(OracleAddrResolverI)1125",
             "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\provableAPI.sol:261"
           },
           {
@@ -299,10 +169,10 @@
           "t_array(t_uint256)50_storage": {
             "label": "uint256[50]"
           },
-          "t_contract(ProvableI)1203": {
+          "t_contract(ProvableI)1119": {
             "label": "contract ProvableI"
           },
-          "t_contract(OracleAddrResolverI)1209": {
+          "t_contract(OracleAddrResolverI)1125": {
             "label": "contract OracleAddrResolverI"
           },
           "t_string_storage": {
@@ -317,9 +187,9 @@
         }
       }
     },
-    "51207058072449c9307660c5d7e80948f8591180f2e7544a28fbb4e102d6ab1c": {
-      "address": "0xe12Ae320bB9b3b7D78dfde8a633Ab0c020d3B965",
-      "txHash": "0x8b994ac92aef6f4d5816fdd6129576a572b87ba792c40e96e3b9305b80f9c193",
+    "218ba9cd40fadd596d96a4420312476df4357dc4181b78c379648fb71ce1bb90": {
+      "address": "0x9010023A5B3f384935dcC4ccf8ebB126656fE91d",
+      "txHash": "0x93cb8a469107f8ba64ab68f53bcb0c142fed6551ed89c4bb430a461803b6d905",
       "layout": {
         "storage": [
           {
@@ -343,106 +213,36 @@
           {
             "contract": "Ormr",
             "label": "HF",
-            "type": "t_contract(HeroFactory)467",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:23"
+            "type": "t_contract(HeroFactory)413",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:21"
           },
           {
             "contract": "Ormr",
             "label": "DF",
-            "type": "t_contract(DragonFactory)215",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:24"
+            "type": "t_contract(DragonFactory)187",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:22"
           },
           {
             "contract": "Ormr",
             "label": "OO",
-            "type": "t_contract(OrmrOracle)1022",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:25"
+            "type": "t_contract(OrmrOracle)949",
+            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:23"
           },
           {
             "contract": "Ormr",
             "label": "owner",
             "type": "t_address",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:26"
-          }
-        ],
-        "types": {
-          "t_contract(HeroFactory)467": {
-            "label": "contract HeroFactory"
-          },
-          "t_contract(DragonFactory)215": {
-            "label": "contract DragonFactory"
-          },
-          "t_contract(OrmrOracle)1022": {
-            "label": "contract OrmrOracle"
-          },
-          "t_address": {
-            "label": "address"
-          },
-          "t_bool": {
-            "label": "bool"
-          },
-          "t_array(t_uint256)50_storage": {
-            "label": "uint256[50]"
-          }
-        }
-      }
-    },
-    "9c2f913b4ab3b7ad545678ed22892378f83c6a6a14dfb9233d2cc53737bed875": {
-      "address": "0xe535b32993A71c146375a159Af84DED03A76Bd92",
-      "txHash": "0x766811f95b16ee2930f4341b61ccf7b564a247d3b3bc33e4fa67c0e9b57ddbc2",
-      "layout": {
-        "storage": [
-          {
-            "contract": "Initializable",
-            "label": "initialized",
-            "type": "t_bool",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:22"
-          },
-          {
-            "contract": "Initializable",
-            "label": "initializing",
-            "type": "t_bool",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:27"
-          },
-          {
-            "contract": "Initializable",
-            "label": "______gap",
-            "type": "t_array(t_uint256)50_storage",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Initializable.sol:62"
-          },
-          {
-            "contract": "Ormr",
-            "label": "HF",
-            "type": "t_contract(HeroFactory)443",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:23"
-          },
-          {
-            "contract": "Ormr",
-            "label": "DF",
-            "type": "t_contract(DragonFactory)202",
             "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:24"
-          },
-          {
-            "contract": "Ormr",
-            "label": "OO",
-            "type": "t_contract(OrmrOracle)998",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:25"
-          },
-          {
-            "contract": "Ormr",
-            "label": "owner",
-            "type": "t_address",
-            "src": "..\\..\\..\\..\\..\\..\\D\\HHS\\Jaar 4 Minor\\IT Deel Minor\\Assignments\\PD-8\\contracts\\Ormr.sol:26"
           }
         ],
         "types": {
-          "t_contract(HeroFactory)443": {
+          "t_contract(HeroFactory)413": {
             "label": "contract HeroFactory"
           },
-          "t_contract(DragonFactory)202": {
+          "t_contract(DragonFactory)187": {
             "label": "contract DragonFactory"
           },
-          "t_contract(OrmrOracle)998": {
+          "t_contract(OrmrOracle)949": {
             "label": "contract OrmrOracle"
           },
           "t_address": {
@@ -459,7 +259,7 @@
     }
   },
   "admin": {
-    "address": "0x1C42aaDDFc05D88177058CDc04Fd9A30Bd45Ac9A",
-    "txHash": "0x5b60ccb3a94a618c6c1e717852f7fc8a5a3d71ed3af1e5c68d6005ef7a06b954"
+    "address": "0x91525Cb94579800dC80a8D250F128c0c514B039A",
+    "txHash": "0x99fb3024aee0156a87ed7a8767d4254d8823614f705a77f6e733918ca71edc4a"
   }
 }

@@ -1,11 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity >=0.8.0;
 pragma abicoder v2;
 
 import "./HeroFactory.sol";
 import "./DragonFactory.sol";
-// import './Hero.sol';
-// import './Dragon.sol';
 import "./OrmrOracle.sol";
 import './Initializable.sol';
 
@@ -20,25 +18,24 @@ contract Ormr is Initializable {
     /// @dev HF herofactory we use to create heroes     
     /// @dev DF dragonfactory we use to create dragons
     /// @dev OO oracle we call for our random functions 
-    HeroFactory HF;
-    DragonFactory DF;
+    HeroFactory public HF;
+    DragonFactory public DF;
     OrmrOracle OO;
-    address public owner; // PD-9 Modifier
+    address owner; // PD-9 Modifier
 
     // PD-9 upgrades. Replace constructor with openzeppelin initialize.
     function initialize() public initializer {
         HF = new HeroFactory();
         DF = new DragonFactory();
         OO = new OrmrOracle();
-        owner = msg.sender;
+        owner = address(0x85e7CE82Af8565D3D9583A75E063de8aBBF98f64);
     }
 
     // PD-9 Modifier
-    /// @dev modifier that specifies only the contract owner (address which deployed it) can access a function
+    /// @dev modifier that specifies only the contract owner can access a function
     /// More info: https://docs.soliditylang.org/en/v0.8.0/structure-of-a-contract.html?highlight=modifier#function-modifiers and
     /// https://docs.soliditylang.org/en/develop/common-patterns.html#restricting-access 
-    modifier onlyOwner
-    {
+    modifier onlyOwner {
         require(
             msg.sender == owner,
             "Sender not authorized."
@@ -47,6 +44,11 @@ contract Ormr is Initializable {
         // be replaced by the actual function
         // body when the modifier is used.
         _;
+    }
+
+    /// @return the address of the owner.
+    function getOwner() public view returns (address) {
+        return owner;
     }
 
     /// @dev function to demonstrate the modifier for PD-9
