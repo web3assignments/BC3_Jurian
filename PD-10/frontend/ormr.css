@@ -1,0 +1,38 @@
+#Welcome-Ormr{
+    background-image: url("https://www.imperial-library.info/sites/default/files/imagecache/node-gallery-display/artsk_dragon02.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 30%;
+}
+
+#Welcome-Ormr h1{
+    color:white;
+}
+
+#Welcome-Ormr p{
+    color:white;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;} /* Red */ 
+.danger:hover {background: #da190b;}
+
+.default {background-color: #e7e7e7; color: black;} /* Gray */ 
+.default:hover {background: #ddd;}
+
