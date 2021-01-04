@@ -1,0 +1,22 @@
+Note: because OpenZeppelin hasn't updated their stuff to work on Solidity 0.8.0 yet...
+
+I put the source in this folder and ran the contracts and everything in Remix IDE.
+
+Using Compiler version 0.6.12.
+ERC20 token: https://rinkeby.etherscan.io/token/0xd4ceb68393097e7df769bb0d94d7cba60f94ced5
+Transfer Proof https://rinkeby.etherscan.io/tx/0x8d585759d5ee245b3ab55fe786909464a68edd4537f12ce9164a256395c987cd 
+
+------------------------------------------------------------------------------------------------------------------------
+NFT
+Using Compiler version 0.8.0
+ERC721 token: https://rinkeby.etherscan.io/token/0xa631f0c7241a328b6d27f3e1a7142304df797d95 
+Transfer Proof: https://rinkeby.etherscan.io/tx/0xd3e5dc33679b1473075bc250a72ab72d561b2c47a30f2a312b07f6efc2c11468 
+
+Create a URI: https://dopiaza.org/tools/datauri/index.php 
+My URI (copy in url in browser):
+data:text/plain;charset=utf-8;base64,ew0KICAiZGVzY3JpcHRpb24iOiAiQmx1ZSBFeWVzIFdoaXRlIERyYWdvbiBORlQgdG9rZW4iLA0KICAiZXh0
+ZXJuYWxfdXJsIjogImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9VFhqRko4YVdyOWciLCANCiAgImltYWdlIjogImh0dHBzOi8vaS5pbWd1ci5jb
+20vRG5oNjhxWC5wbmciLCANCiAgIm5hbWUiOiAiQmx1ZSBFeWVzIFdoaXRlIERyYWdvbiINCn0NCg==
+
+View on OpenSea: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/10
+and https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/11 
