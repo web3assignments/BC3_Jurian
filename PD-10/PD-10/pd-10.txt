@@ -14,9 +14,13 @@ Transfer Proof: https://rinkeby.etherscan.io/tx/0xd3e5dc33679b1473075bc250a72ab7
 
 Create a URI: https://dopiaza.org/tools/datauri/index.php 
 My URI (copy in url in browser):
-data:text/plain;charset=utf-8;base64,ew0KICAiZGVzY3JpcHRpb24iOiAiQmx1ZSBFeWVzIFdoaXRlIERyYWdvbiBORlQgdG9rZW4iLA0KICAiZXh0
-ZXJuYWxfdXJsIjogImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9VFhqRko4YVdyOWciLCANCiAgImltYWdlIjogImh0dHBzOi8vaS5pbWd1ci5jb
-20vRG5oNjhxWC5wbmciLCANCiAgIm5hbWUiOiAiQmx1ZSBFeWVzIFdoaXRlIERyYWdvbiINCn0NCg==
+data:JSON;base64,ew0KICAiZGVzY3JpcHRpb24iOiAiQmx1ZSBFeWVzIFdoaXRlIERyYWdvbiBORlQgdG9rZW4iLA0KICAiZXh0ZXJuYWxfdXJsI
+jogImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9VFhqRko4YVdyOWciLCANCiAgImltYWdlIjogImh0dHBzOi8vaS5pbWd1ci5jb20vRG5
+oNjhxWC5wbmciLCANCiAgIm5hbWUiOiAiQmx1ZSBFeWVzIFdoaXRlIERyYWdvbiINCn0NCg==
 
-View on OpenSea: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/10
-and https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/11 
+View on OpenSea: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/11 
+
+
+Token URI: https://raw.githubusercontent.com/ToFat4Fun/TokenURI/main/tokenURI.json 
+Token with image: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/12
+
