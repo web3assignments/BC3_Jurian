@@ -12,11 +12,6 @@ Using Compiler version 0.8.0
 ERC721 token: https://rinkeby.etherscan.io/token/0xa631f0c7241a328b6d27f3e1a7142304df797d95 
 Transfer Proof: https://rinkeby.etherscan.io/tx/0xd3e5dc33679b1473075bc250a72ab72d561b2c47a30f2a312b07f6efc2c11468 
 
-Create a URI: https://dopiaza.org/tools/datauri/index.php 
-My URI (copy in url in browser):
-data:JSON;base64,ew0KICAiZGVzY3JpcHRpb24iOiAiQmx1ZSBFeWVzIFdoaXRlIERyYWdvbiBORlQgdG9rZW4iLA0KICAiZXh0ZXJuYWxfdXJsI
-jogImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9VFhqRko4YVdyOWciLCANCiAgImltYWdlIjogImh0dHBzOi8vaS5pbWd1ci5jb20vRG5
-oNjhxWC5wbmciLCANCiAgIm5hbWUiOiAiQmx1ZSBFeWVzIFdoaXRlIERyYWdvbiINCn0NCg==
 
 View on OpenSea: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/11 
 
