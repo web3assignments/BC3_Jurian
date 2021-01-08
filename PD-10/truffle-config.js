@@ -6,6 +6,8 @@ const mnemonic = fs.readFileSync(".secret")
     .toString().trim(); // contains mnemonic
 const infuraKey = fs.readFileSync(".infura")
     .toString().trim(); // infura key
+const etherscanAPIKey = fs.readFileSync(".etherscanAPIkey")
+    .toString().trim(); // etehrscan key
 
 var adr;
 
@@ -63,5 +65,12 @@ module.exports = {
       //  evmVersion: "byzantium"
       // }
     }
+  },
+
+  plugins: [
+      'truffle-plugin-verify'
+  ],
+  api_keys: {
+      etherscan: etherscanAPIKey
   }
 };

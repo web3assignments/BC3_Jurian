@@ -18,4 +18,3 @@ View on OpenSea: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7
 
 Token URI: https://raw.githubusercontent.com/ToFat4Fun/TokenURI/main/tokenURI.json 
 Token with image: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/12
-

@@ -38,7 +38,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -51,7 +52,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -71,7 +73,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -126,7 +129,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -161,7 +165,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -208,7 +213,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -234,14 +240,16 @@
         }
       ],
       "stateMutability": "pure",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
       "name": "callOracleRandom",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -254,7 +262,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -267,7 +276,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"encounterResult\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"ownerSaysResponse\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DF\",\"outputs\":[{\"internalType\":\"contract DragonFactory\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"HF\",\"outputs\":[{\"internalType\":\"contract HeroFactory\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"callOracleRandom\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"input\",\"type\":\"bytes\"}],\"name\":\"convertToUint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"createDragon\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"createHero\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDragon\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"id\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"power\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"health\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"goldReward\",\"type\":\"uint256\"}],\"internalType\":\"struct Dragon\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getHero\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"power\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"health\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"bank\",\"type\":\"uint256\"}],\"internalType\":\"struct Hero\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getHeroes\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"power\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"health\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"bank\",\"type\":\"uint256\"}],\"internalType\":\"struct Hero[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTemp\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTempUint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ownerSays\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"startEncounter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"github@ToFat4Fun\",\"details\":\"Working with solidity v0.8.0\",\"events\":{\"encounterResult(string)\":{\"details\":\"emits the result of the battle initiated by the user. shows in front-end\"},\"ownerSaysResponse(string)\":{\"details\":\"return for the ownerSays method\"}},\"kind\":\"dev\",\"methods\":{\"callOracleRandom()\":{\"details\":\"call the oracle using OrmrOracle instance, we need to send ETH as subsequent requests to provable are not free hence the payable attribute and value: msg.value object\"},\"convertToUint(bytes)\":{\"details\":\"Let's do something with our Oracle here. Because we want to display uint to the user and our Oracle returns bytes format, let's convert it here. Web3examples convert to uint https://github.com/web3examples/ethereum/blob/master/solidity_examples/bytes2uint.sol\",\"params\":{\"input\":\"the bytes we want to convert to uint\"},\"returns\":{\"_0\":\"the converted bytes value as uint\"}},\"createDragon()\":{\"details\":\"creates a dragon using dragonfactory\"},\"createHero(string)\":{\"details\":\"below follows the game logic of creating heroes and dragons, combat and handling Oracle requests\",\"params\":{\"_name\":\"heroname given by the user\"}},\"getDragon()\":{\"returns\":{\"_0\":\"returns dragon object\"}},\"getHero()\":{\"returns\":{\"_0\":\"return hero associated with the user requesting the address\"}},\"getHeroes()\":{\"returns\":{\"_0\":\"returns all heroes in array form\"}},\"getOwner()\":{\"returns\":{\"_0\":\"the address of the owner.\"}},\"getTemp()\":{\"details\":\"only request AFTER the oracle has been called (and wait atleast 2 blocks for the result + callback) otherwise it will return NULL and undefined. This method also converts the result to uint right away for display in the front-end\",\"returns\":{\"_0\":\"returns the result of the oracle call as bytes\"}},\"getTempUint()\":{\"details\":\"only request AFTER the oracle has been called (and wait atleast 2 blocks for the result + callback) otherwise it will return NULL and undefined. This method also converts the result to uint right away for display in the front-end\",\"returns\":{\"_0\":\"returns the result of the oracle call as uint\"}},\"ownerSays()\":{\"details\":\"function to demonstrate the modifier for PD-9\"},\"startEncounter()\":{\"details\":\"This is the function our user sees when starting a battle.\"}},\"stateVariables\":{\"HF\":{\"details\":\"HF herofactory we use to create heroes     DF dragonfactory we use to create dragonsOO oracle we call for our random functions \"}},\"title\":\"Ormr, Man vs. Dragon\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"startEncounter()\":{\"notice\":\"here you can initiate a battle! make sure there is both a dragon and hero\"}},\"notice\":\"Calling the Oracle might take a few seconds to minutes, depending on block processing speed.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/Ormr.sol\":\"Ormr\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/DragonFactory.sol\":{\"keccak256\":\"0x7af7e95bceeb74173d24e69f5839661fd46220eee12744065b78eb42e517432d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9417b34bc7d3e050966c2101c32df1a147b691ffd856d53bc85e27774a7c7aa6\",\"dweb:/ipfs/QmVoqxfmfXYeGyniMw86YHdgbsPZm1Q99YkoAwDtrPwQ1M\"]},\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/HeroFactory.sol\":{\"keccak256\":\"0x6cb64a76a0205bd54ab070cf284f8a8205bd1a866dcb38aa62942969cdc01352\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1614690a738a90929852b71538c33510ecd30ac6471c906bddfef62a409a6501\",\"dweb:/ipfs/QmW1pP5NuTPWRy1T7DriYxVBjRoKGXnH9vL8SCYSVQSuen\"]},\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/Initializable.sol\":{\"keccak256\":\"0x408df630dac244b5929815dcff1da4a20ab1a05c25229f44f0f398332125e753\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bebadf84cf5f7531c840cbf950a7c5c997955afea2562847117aa010f28318c2\",\"dweb:/ipfs/QmZ95DaGsq1fxqvn5NLUkQyryDE4s3zgEzRhEg7r8waRRg\"]},\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/Ormr.sol\":{\"keccak256\":\"0xe672990d81f7cd128760e7b5ec0623fc00e0926c49e18badcac8129bac46652c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6251df84d8e57e6f0d5276b89f7bcdec0f299738710b999b26c8e85a7f8b5c94\",\"dweb:/ipfs/QmeF4Yn5cepuEW68xU6aHveozGhvfgqs8PcJFnTfPF3VN7\"]},\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/OrmrOracle.sol\":{\"keccak256\":\"0x0e3ae5e7d536c2a672e87d316a6591779b1a59a44612d822316b381fd4421617\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dea5598d5ec7a5beb03d053b54f205dc68dbc1ff3530a20707a70fc4eacbde43\",\"dweb:/ipfs/QmabPVPgBVrsKfk1uBAKNEQ4cow4GNo1yVNeqnjpAbx82v\"]},\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/SimpleFactory.sol\":{\"keccak256\":\"0xd50fc475c95ff5e3109c15d0b107883803c7fc03b13d6161b9d3c43514f5c8d9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://58e23899f841c34d29eb42cdda2066e456435c8cea7845bb94acc5709dafc33d\",\"dweb:/ipfs/QmWt68WQHePWXrs3DHKM3vvLLhhM127taN5VaxqdtcHiiG\"]},\"/D/HHS/Jaar 4 Minor/IT Deel Minor/Assignments/PD-8/contracts/provableAPI.sol\":{\"keccak256\":\"0x9e9a8aced44aba2150e9f12625ff4862e72cfe9716417516f0eb557657f1d72e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f16d684c3c2fe101957b0f9967f1f2d0a7be4b876a251c165a788371b6287c21\",\"dweb:/ipfs/QmXTWT3mmREk2NLXYjucbdcwEgG2tQwkajzp4NtrDrCEwv\"]}},\"version\":1}",
@@ -23533,11 +23543,24 @@
           ],
           "name": "OwnerSaysResponse",
           "type": "event"
+        },
+        "0x1b3ee9d10bc43f5084c1fedd500eb67ec732a4fe06f503678c502d02f5192f55": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "name": "ownerSaysResponse",
+          "type": "event"
         }
       },
       "links": {},
-      "address": "0x54bc5Db7fF816f8bE77E3d0EB708b03f33A65843",
-      "transactionHash": "0xa27e9894dbea10d66b2b79fc3704f406045283c0597cd706e19e1e7a97e2ba01"
+      "address": "0xdAB503510EF9407395f4ec393EeC6E5FAc3c9137",
+      "transactionHash": "0x97d2c20f80364fafc0742f7fa612d661d5fa0896805f2bd07320db9c88c4d34f"
     },
     "5777": {
       "events": {
@@ -23574,7 +23597,8 @@
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2021-01-04T19:12:05.692Z",
+  "updatedAt": "2021-01-08T12:53:57.354Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "github@ToFat4Fun",
     "details": "Working with solidity v0.8.0",

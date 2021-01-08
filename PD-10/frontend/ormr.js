@@ -3,8 +3,8 @@
 //const contract_address = '0x648a8087721bb3f68d2e9217a55850bfacece905';
 
 // For PD-8 and higher
-// Ormr deployed at: https://rinkeby.etherscan.io/address/0x54bc5Db7fF816f8bE77E3d0EB708b03f33A65843 
-const contract_address = '0x54bc5Db7fF816f8bE77E3d0EB708b03f33A65843';
+// Ormr deployed at: https://rinkeby.etherscan.io/address/0xdAB503510EF9407395f4ec393EeC6E5FAc3c9137
+const contract_address = '0xdAB503510EF9407395f4ec393EeC6E5FAc3c9137';
 
 // Compile your contract in remix, then go to the .JSON artifact and ABI will be there. OR truffle build/contracts folder.
 
@@ -180,7 +180,7 @@ const abi = [
           "type": "string"
         }
       ],
-      "name": "OwnerSaysResponse",
+      "name": "encounterResult",
       "type": "event"
     },
     {
@@ -193,7 +193,7 @@ const abi = [
           "type": "string"
         }
       ],
-      "name": "encounterResult",
+      "name": "ownerSaysResponse",
       "type": "event"
     },
     {
@@ -525,7 +525,7 @@ async function startEncounter() {
 // Call our oracle
 async function callOracleRandom() {
   await contract.methods.callOracleRandom().send({from: accounts[0], value: web3.utils.toWei('0.1', 'ether')}).then(x => {console.log(x); return x}); // calls oracle
-	document.getElementById('OracleRandom').innerText = 'Oracle called, please wait up to 60 seconds before pressing "Get Result"';
+	document.getElementById('oracleRandom').innerText = 'Oracle called, please wait up to 60 seconds before pressing "Get Result"';
 }
 
 // directly access variable
@@ -533,7 +533,7 @@ async function getTemp() {
   var result = await contract.methods.getTemp().call().then(x => {console.log(x); return x});
   document.getElementById('tempRaw').innerText = result; // raw bytes/hex result
   var resUint = await contract.methods.getTempUint().call().then(x => {console.log(x); return x}); // converted result
-  document.getElementById('OracleRandom').innerText = resUint // replace text with the result
+  document.getElementById('oracleRandom').innerText = resUint // replace text with the result
 } 
 
 // PD-9 modifier OwnerSays function; only contract owner should be able to call this
@@ -553,4 +553,13 @@ async function selfdestruct() {
   console.log(`initiating self-destruct for ${contract_address}, stand by`);
   var result = await contract.methods.destroy().send({from: accounts[0]}).then(x => {console.log(x); return x});
   document.getElementById('selfdestruct').innerText = result.value;
+}
+
+// Load date for credits in footer
+window.onload = getDateCopyright;
+
+ function getDateCopyright() {
+  var now = new Date();
+  var currentYear = now.getFullYear();
+  document.getElementById('credits').innerText = `©${currentYear} Ormr`;
 }
