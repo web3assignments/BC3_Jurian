@@ -1,10 +1,6 @@
 // SPDX-License-Identifier: MIT
-
 // based on https://github.com/ConsenSys/artifaqt/blob/master/contract/contracts/eip721
 // Use for educational purposes only // without approval functions
-
-// Source from Web3Examples: https://github.com/web3examples/ethereum/blob/master/token_examples/VeryBasicNFT_sol6.sol
-// Updated for Sol 0.8.0
 pragma solidity ^0.8.0;
 
 contract EIP721 {  
@@ -30,15 +26,8 @@ contract EIP721 {
     bytes4 internal constant ERC721_ENUMERABLE_INTERFACE_SIGNATURE = 0x780e9d63;
     bytes4 internal constant ONERC721RECEIVED_FUNCTION_SIGNATURE = 0x150b7a02;
 
-    // Original code
-    // modifier tokenExists(uint256 _tokenId) {
-    //     require(uint256(ownerOfToken[_tokenId]) != 0);
-    //     _;
-    // }
-    
-    // Updated for Sol 0.8.0 https://docs.soliditylang.org/en/v0.8.0/080-breaking-changes.html#how-to-update-your-code 
     modifier tokenExists(uint256 _tokenId) {
-        require(keccak256(abi.encodePacked(ownerOfToken[_tokenId])) != keccak256(abi.encodePacked("")));
+        require(ownerOfToken[_tokenId] != address(0));
         _;
     }
     constructor (string memory _name, string memory _symbol) {
@@ -53,17 +42,9 @@ contract EIP721 {
         receivedData     = _data;
         return ONERC721RECEIVED_FUNCTION_SIGNATURE;    
     } 
-    // Original code
-    // modifier allowedToTransfer(address _from, address _to, uint256 _tokenId) {
-    //     require(ownerOfToken[_tokenId] == _from);
-    //     require(uint256(_to) != 0); //not allowed to burn in transfer method
-    //     _;
-    // }
-    
-    // Updated for Sol 0.8.0
     modifier allowedToTransfer(address _from, address _to, uint256 _tokenId) {
         require(ownerOfToken[_tokenId] == _from);
-        require(keccak256(abi.encodePacked(_to)) != keccak256(abi.encodePacked(""))); //not allowed to burn in transfer method
+        require(_to != address(0)); //not allowed to burn in transfer method
         _;
     }
     function transferFrom(address _from, address _to, uint256 _tokenId) public payable
@@ -107,15 +88,8 @@ contract EIP721 {
         require(_index < ownedTokens[_owner].length);
         return ownedTokens[_owner][_index];
     }
-    // Original code
-    // function balanceOf(address _owner) external view returns (uint256) {
-    //     require(uint256(_owner) != 0);
-    //     return ownedTokens[_owner].length;
-    // }
-    
-    // Updated for Sol 0.8.0
     function balanceOf(address _owner) external view returns (uint256) {
-        require(keccak256(abi.encodePacked(_owner)) != keccak256(abi.encodePacked("")));
+        require(_owner != address(0));
         return ownedTokens[_owner].length;
     }
     function tokenURI(uint256 _tokenId) external view returns (string memory) {
