@@ -1,0 +1,5 @@
+// PD-11 Create website to store & retrieve images on IPFS => capture source ✔️
+// Store the website itself on IPFS => capture cid ✔️
+Image on IPFS: https://ipfs.io/ipfs/QmS4EaMdytCVzAqsgxwRCKoopW8NQWfYsbLzJJKbZ5Nnu1 
+Website on IPFS: https://ipfs.io/ipfs/QmceNPqnH4V7rBY1BEnahyYP89hGfsnSUZtEWTAYsNLxFo 
+Add folder to ipfs: ipfs add -r frontend/ 
