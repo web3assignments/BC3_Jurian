@@ -34,3 +34,4 @@ truffle run verify Studieschuld@0x75576d08c398157a5053d49f5d6fbb22514ff157 --net
 
 after this succeeded, upgrading back to sol 0.8.0
 
+https://forum.openzeppelin.com/t/verify-smart-contract-inheriting-from-openzeppelin-contracts/4119
