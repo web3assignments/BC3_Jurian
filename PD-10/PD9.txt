@@ -19,3 +19,18 @@ walkthrough:
 3: npx solidity-docgen --solc-module solc-0.8.0
 4: NatSpec comments generated! find them in ./docs)
 - add safemath ✔️ (built-in since sol 0.8.0)
+
+
+PD-9 Verify Source:
+Verified the contract my group has to use for the field assignment:
+https://rinkeby.etherscan.io/address/0x75576d08c398157a5053d49f5d6fbb22514ff157#code
+
+steps:
+I had to downgrade to sol 0.7.6 (thanks OpenZeppelin)
+npm install @openzeppelin/contracts 
+change import paths in the contract to point to node_modules
+run the following command:
+truffle run verify Studieschuld@0x75576d08c398157a5053d49f5d6fbb22514ff157 --network rinkeby
+
+after this succeeded, upgrading back to sol 0.8.0
+
