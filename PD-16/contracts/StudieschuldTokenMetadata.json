@@ -1,0 +1,11 @@
+{
+    "name": "Student Debt Representation Token",
+    "description": "This token is officially issued by the Nederlandse Overheid, specifically Dienst Uitvoering Onderwijs",
+    "external_url": "https://www.duo.nl/particulier/studieschuld-terugbetalen/", 
+    "image": "https://i.ibb.co/B3Hrr2j/Duo-nl-Mijn-Overheid.png",
+    "origin": "0xd65eDa7496d95e66cB9A9C0c469d9ACdf2039c6d",
+    "hasDebt": "true",
+    "amountOfDebt": "Higher than 4000",
+    "address_user": "0xd65eDa7496d95e66cB9A9C0c469d9ACdf2039c6d",
+    "payment_plan": "9.52 Euro aflossing per maand over 35 jaar"
+}

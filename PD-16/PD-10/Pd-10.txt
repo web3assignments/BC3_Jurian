@@ -1,0 +1,20 @@
+Note: because OpenZeppelin hasn't updated their stuff to work on Solidity 0.8.0 yet...
+
+I put the source in this folder and ran the contracts and everything in Remix IDE.
+
+Using Compiler version 0.6.12.
+ERC20 token: https://rinkeby.etherscan.io/token/0xd4ceb68393097e7df769bb0d94d7cba60f94ced5
+Transfer Proof https://rinkeby.etherscan.io/tx/0x8d585759d5ee245b3ab55fe786909464a68edd4537f12ce9164a256395c987cd 
+
+------------------------------------------------------------------------------------------------------------------------
+NFT
+Using Compiler version 0.8.0
+ERC721 token: https://rinkeby.etherscan.io/token/0xa631f0c7241a328b6d27f3e1a7142304df797d95 
+Transfer Proof: https://rinkeby.etherscan.io/tx/0xd3e5dc33679b1473075bc250a72ab72d561b2c47a30f2a312b07f6efc2c11468 
+
+
+View on OpenSea: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/11 
+
+
+Token URI: https://raw.githubusercontent.com/ToFat4Fun/TokenURI/main/tokenURI.json 
+Token with image: https://testnets.opensea.io/assets/0xa631f0c7241a328b6d27f3e1a7142304df797d95/12

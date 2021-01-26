@@ -1,0 +1,37 @@
+run the command:
+npm install @openzeppelin/truffle-upgrades
+
+PD-9:
+Upgrade to Solidity 8, SafeMath built-in since this version.
+https://docs.soliditylang.org/en/v0.8.0/080-breaking-changes.html
+
+PD-9 Best Practices
+Update your smart contract with 3 of the following:
+- add a modifier; ✔️ (more information https://docs.soliditylang.org/en/develop/common-patterns.html#restricting-access )
+- add a selfdestruct function; ✔️ (Added to Ormr.sol , more information: https://docs.soliditylang.org/en/v0.8.0/contracts.html#modifiers 
+however this won't work with openzeppelin, see https://zpl.in/upgrades/error-003)
+- if you use send or transfer, replace it with call;
+- add natspec comments ✔️ Guidelines: https://docs.soliditylang.org/en/v0.8.0/natspec-format.html 
+Tool -> https://github.com/OpenZeppelin/solidity-docgen/blob/master/README.md#contracts-with-dependendencies
+walkthrough:
+1: npm install solidity-docgen
+2: npm install solc-0.8.0@npm:solc@0.8.0 (you need to use an alias to select compiler version for the next command)
+3: npx solidity-docgen --solc-module solc-0.8.0
+4: NatSpec comments generated! find them in ./docs)
+- add safemath ✔️ (built-in since sol 0.8.0)
+
+
+PD-9 Verify Source:
+Verified the contract my group has to use for the field assignment:
+https://rinkeby.etherscan.io/address/0x75576d08c398157a5053d49f5d6fbb22514ff157#code
+
+steps:
+I had to downgrade to sol 0.7.6 (thanks OpenZeppelin)
+npm install @openzeppelin/contracts 
+change import paths in the contract to point to node_modules
+run the following command:
+truffle run verify Studieschuld@0x75576d08c398157a5053d49f5d6fbb22514ff157 --network rinkeby
+
+after this succeeded, upgrading back to sol 0.8.0
+
+https://forum.openzeppelin.com/t/verify-smart-contract-inheriting-from-openzeppelin-contracts/4119
